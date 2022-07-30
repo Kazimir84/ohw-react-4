@@ -4,25 +4,26 @@ import AddNewEquipment from "./AddNewEquipment";
 import RemoveEquipment from "./RemoveEquipment";
 import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 
-
+const PASSWORD = 'admin';
 const URL = 'http://localhost:3000/equipments'
 
 export default class Equipment extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-           equipment: [],
-           error: null,
-           nameEquipment: null,
-           nameManufacture: null
-        }
+            equipment: [],
+            error: null,
+            nameEquipment: null,
+            nameManufacture: null
+        };
         this.visibleSettings = this.visibleSettings.bind(this);
         this.props = props;
         this.linkManufacturer = this.linkManufacturer.bind(this);
         this.changeInventoryEquipment = this.changeInventoryEquipment.bind(this);
         this.changeShopEquipment = this.changeShopEquipment.bind(this);
         this.pageReload = this.pageReload.bind(this);
-    }
+        this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
+    };
 
     componentDidMount() {
         axios.get(URL)
@@ -33,7 +34,7 @@ export default class Equipment extends React.Component {
                 this.setState({error: error})
                 console.log('Error', error.code)
             })
-    }
+    };
 
     visibleSettings = event => {
         if (this.state.nameEquipment === null) {
@@ -41,53 +42,90 @@ export default class Equipment extends React.Component {
             this.setState({nameEquipment: nameEquipment});
         } else {
             let divVisibleSettings = document.querySelectorAll(".visibleSettings")[0];
-            divVisibleSettings.classList.toggle("hiddenSetting")
+            divVisibleSettings.classList.toggle("hiddenSetting");
             let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[1];
             divHiddenSetting.classList.toggle("hiddenSetting");
             let nameEquipment = event.nativeEvent.path[0].textContent;
             this.setState({nameEquipment: nameEquipment});
         }
-    }
+    };
 
     pageReload() {
         document.location.reload();
-    }
+    };
 
     changeInventoryEquipment = event => {
-       let oldValue = event.nativeEvent.path[0].textContent;
-       let newValue = prompt('Изменение Инвентарного Номера', oldValue)
-       if (newValue !== null) {
-           let target = this.state.equipment.find((index => index.inventory === oldValue));
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменение Инвентарного Номера', oldValue);
+            if (newValue !== null) {
+                let target = this.state.equipment.find((index => index.id === id));
                 target.inventory = newValue;
-           const URLPUT = `http://localhost:3000/equipments/${target.id}`
-           axios.put(URLPUT, target)
-               .then(response => {
-                   alert(`Инвентарный Номер изменен c ${oldValue} на ${newValue} успешно!`)
-                   this.pageReload();
-               })
-               .catch(e => {
-                   this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack})
-                   console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack)
-               })
-       }
-    }
+                const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Инвентарный Номер изменен c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    };
 
     changeShopEquipment = event => {
-        let oldValue = event.nativeEvent.path[0].textContent;
-        let newValue = prompt('Изменить номер цеха', oldValue)
-        if (newValue !== null) {
-            let target = this.state.equipment.find((index => index.shop == oldValue));
-            target.shop = newValue;
-            const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`
-            axios.put(URLPUT, target)
-                .then(response => {
-                    alert(`Номер Цеха изменен c ${oldValue} на ${newValue} успешно!`)
-                    this.pageReload();
-                })
-                .catch(e => {
-                    this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack})
-                    console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack)
-                })
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменить номер цеха', oldValue);
+                if (newValue !== null) {
+                    let target = this.state.equipment.find((index => index.id === id));
+                    target.shop = newValue;
+                    const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`;
+                    axios.put(URLPUT, target)
+                        .then(response => {
+                            alert(`Номер Цеха изменен c ${oldValue} на ${newValue} успешно!`);
+                            this.pageReload();
+                        })
+                        .catch(e => {
+                            this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                            console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                        })
+                }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    };
+
+    changeSerialEquipment = event => {
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменить Серийный номер аппарата', oldValue);
+            if (newValue !== null) {
+                let target = this.state.equipment.find((index => index.id === id));
+                target.serial = newValue;
+                const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Серийный номер аппарата изменен c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
         }
     }
 
@@ -122,13 +160,17 @@ export default class Equipment extends React.Component {
                 const URLJaeckle = 'https://svarka-trading.com.ua/info/brands/jackle/';
                 this.setState({linkManufacturer: URLJaeckle});
                 break;
+            case 'ЭНЕРГИЯ':
+                const URLEnergy = 'https://energy-welding.com/';
+                this.setState({linkManufacturer: URLEnergy});
+                break;
             default:
                 this.setState({linkManufacturer: 'No'});
         }
     }
 
     render() {
-        if(this.state.error !== null) {
+        if (this.state.error !== null) {
             return (
                 <div>
                     <h4>
@@ -143,8 +185,8 @@ export default class Equipment extends React.Component {
         return (
             <div>
                 <div className="visibleSettings">
-                <table>
-                    <thead>
+                    <table>
+                        <thead>
                         <tr>
                             <th>
                                 Номер Цеха
@@ -168,46 +210,54 @@ export default class Equipment extends React.Component {
 
                             </th>
                         </tr>
-                    </thead>
-                    <tbody>
-                    {
-                        this.state.equipment.map(equipments => {
-                            return (
-                                <tr>
-                                    <td>
-                                        <span onClick={this.changeShopEquipment}>{equipments.shop}</span>
-                                    </td>
-                                    <td>
-                                        {equipments.id}
-                                    </td>
-                                    <td>
-                                        <a onClick={this.visibleSettings} target='_blank' rel="noopener noreferrer">{equipments.model}</a>
-                                    </td>
-                                    <td>
-                                        <span onClick={this.changeInventoryEquipment}>{equipments.inventory}</span>
-                                    </td>
-                                    <td>
-                                        {equipments.serial}
-                                    </td>
-                                    <td>
-                                        <a onClick={this.linkManufacturer} href={this.state.linkManufacturer}>{equipments.manufacturer}</a>
-                                    </td>
-                                    <RemoveEquipment/>
-                                </tr>
-                            )
-                        })
-                    }
-                    </tbody>
-                    <tfoot>
-                        <h5>
+                        </thead>
+                        <tbody>
+                        {
+                            this.state.equipment.map(equipments => {
+                                return (
+                                    <tr>
+                                        <td>
+                                            <span onClick={this.changeShopEquipment}
+                                                  className='spanLink'>{equipments.shop}</span>
+                                        </td>
+                                        <td>
+                                            {equipments.id}
+                                        </td>
+                                        <td>
+                                            <a onClick={this.visibleSettings} target='_blank'
+                                               rel="noopener noreferrer">{equipments.model}</a>
+                                        </td>
+                                        <td>
+                                            <span onClick={this.changeInventoryEquipment}
+                                                  className='spanLink'>{equipments.inventory}</span>
+                                        </td>
+                                        <td>
+                                            <span onClick={this.changeSerialEquipment}
+                                                  className='spanLink'>{equipments.serial}</span>
+                                        </td>
+                                        <td>
+                                            <a onClick={this.linkManufacturer}
+                                               href={this.state.linkManufacturer}>{equipments.manufacturer}</a>
+                                        </td>
+                                        <RemoveEquipment/>
+                                    </tr>
+                                )
+                            })
+                        }
+                        </tbody>
+                        <tfoot>
+                        <h4>
                             <div>
                                 End of Table
+                                <h5>
+                                    Общее колличество сварочного оборудования = {this.state.equipment.length} шт.
+                                </h5>
                             </div>
-                        </h5>
-                    </tfoot>
-                </table>
-                <AddNewEquipment />
-            </div>
+                        </h4>
+                        </tfoot>
+                    </table>
+                    <AddNewEquipment/>
+                </div>
                 <EquipmentsSettings choise={this.state.nameEquipment}/>
             </div>
         )

@@ -1,6 +1,7 @@
 import React from "react";
 import axios, {Axios} from "axios";
 
+const PASSWORD = 'admin'
 const URL = "http://localhost:3000/equipments"
 
 export default class RemoveEquipment extends React.Component {
@@ -14,16 +15,22 @@ export default class RemoveEquipment extends React.Component {
     }
 
     removeEquipment (event) {
-        let id = Number(event.nativeEvent.path[2].cells[1].textContent);
-        this.setState({id: id});
-        event.nativeEvent.path[2].remove();
-        axios.delete(`${URL}/${id}`)
-            .then(res => {
-                axios.get(URL)
-                    .then(response => {
-                        this.setState({equipment: response})
-                    })
-            })
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].cells[1].textContent);
+            this.setState({id: id});
+            event.nativeEvent.path[2].remove();
+            axios.delete(`${URL}/${id}`)
+                .then(res => {
+                    axios.get(URL)
+                        .then(response => {
+                            this.setState({equipment: response})
+                        })
+                })
+        } else {
+            alert('У Вас нет прав для этого действия!')
+        }
+
     }
 
     render() {

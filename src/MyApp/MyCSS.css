@@ -73,3 +73,9 @@ input:hover {
 img {
     width: 30%;
 }
+.spanLink {
+    cursor: help;
+}
+.spanLink:hover {
+    color: aqua;
+}
