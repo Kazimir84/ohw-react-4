@@ -1,8 +1,8 @@
 import React from "react";
 import axios, {Axios} from "axios";
 
-const PASSWORD = 'admin'
-const URL = "http://localhost:3000/equipments"
+const PASSWORD = 'admin';
+const URL = "http://localhost:30001/equipments";
 
 export default class RemoveEquipment extends React.Component {
     constructor(props) {

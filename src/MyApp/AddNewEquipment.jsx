@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 
-const URL = 'http://localhost:3000/equipments';
+const URL = 'http://localhost:30001/equipments';
+
 const newEquipment = {
     shop: 'Данные небыли введены',
     id: 'Данные небыли введены',
@@ -36,14 +37,11 @@ export default class AddNewEquipment extends React.Component {
 
 
     handleAddShop = event => {
-        // this.setState({shop: Number(event.target.value)});
         newEquipment.shop = Number(event.target.value);
-        console.log('DDDDD', event.target.value);
     }
     handleAddId = event => {
         let id = event.nativeEvent.path[3].children[0].children[1].children.length + 1;
         newEquipment.id = Number(id);
-
     }
     handleAddModel = event => {
         newEquipment.model = event.target.value;

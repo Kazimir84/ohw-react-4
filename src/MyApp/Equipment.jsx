@@ -5,7 +5,8 @@ import RemoveEquipment from "./RemoveEquipment";
 import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 
 const PASSWORD = 'admin';
-const URL = 'http://localhost:3000/equipments'
+const URL = 'http://localhost:3001/equipments';
+// const URL = 'https://github.com/Kazimir84/ohw-react-4/blob/main/src/db/db.json'
 
 export default class Equipment extends React.Component {
     constructor(props) {

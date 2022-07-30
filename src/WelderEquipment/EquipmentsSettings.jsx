@@ -25,11 +25,9 @@ export default class EquipmentsSettings extends React.Component {
 
     backToList = event => {
         let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[0];
-        divHiddenSetting.classList.toggle("hiddenSetting")
+        divHiddenSetting.classList.toggle("hiddenSetting");
         let divVisibleSettings = document.querySelectorAll(".visibleSettings")[1];
-        divVisibleSettings.classList.toggle("hiddenSetting")
-        console.log('DSDSDSD', divVisibleSettings)
-        console.log('choisedEquipment', this.props.choise)
+        divVisibleSettings.classList.toggle("hiddenSetting");
     }
 
     render() {
