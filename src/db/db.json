@@ -1,0 +1,410 @@
+{
+  "equipments": [
+    {
+      "shop": 1,
+      "id": 1,
+      "serial": "----",
+      "inventory": "Н0029",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С"
+    },
+    {
+      "shop": 1,
+      "id": 2,
+      "serial": "----",
+      "inventory": "А0028",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С"
+    },
+    {
+      "shop": 1,
+      "id": 3,
+      "serial": "----",
+      "inventory": "Н0069",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С"
+    },
+    {
+      "shop": 1,
+      "id": 4,
+      "serial": "----",
+      "inventory": "А53",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С"
+    },
+    {
+      "shop": 1,
+      "id": 5,
+      "inventory": "A302",
+      "model": "Origio MIG 340 Pro",
+      "serial": "----",
+      "manufacturer": "ESAB"
+    },
+    {
+      "shop": 1,
+      "id": 6,
+      "inventory": "A301",
+      "model": "Origio MIG 340 Pro",
+      "serial": "----",
+      "manufacturer": "ESAB"
+    },
+    {
+      "shop": 1,
+      "id": 7,
+      "inventory": "A271",
+      "model": "Origio MIG 340 Pro",
+      "serial": "----",
+      "manufacturer": "ESAB"
+    },
+    {
+      "shop": 1,
+      "id": 8,
+      "inventory": "Н0062",
+      "model": "Машина плазменной резки ЧПУ Radian-1500",
+      "manufacturer": "Radian",
+      "serial": "----"
+    },
+    {
+      "shop": 1,
+      "id": 9,
+      "inventory": "Н065",
+      "model": "Машина плазменной резки ЧПУ Radian-1500",
+      "manufacturer": "Radian",
+      "serial": "----"
+    },
+    {
+      "shop": 1,
+      "id": 10,
+      "inventory": "А0132",
+      "model": "Машина плазменной резки ЧПУ Radian-2000",
+      "manufacturer": "Radian",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 11,
+      "inventory": "Ф198",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 12,
+      "inventory": "A267",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-805-7076"
+    },
+    {
+      "shop": 2,
+      "id": 13,
+      "inventory": "H0030",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-550-4087"
+    },
+    {
+      "shop": 2,
+      "id": 14,
+      "inventory": "H0031",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 15,
+      "inventory": "Ф021",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 16,
+      "inventory": "Н-216",
+      "model": "JASIC MIG 500",
+      "manufacturer": "JASIC",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 17,
+      "inventory": "Н-217",
+      "model": "MEGMEET Ehave CM-350",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 18,
+      "inventory": "A376",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-747-6845"
+    },
+    {
+      "shop": 2,
+      "id": 19,
+      "inventory": "A270",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-850-8210"
+    },
+    {
+      "shop": 2,
+      "id": 20,
+      "inventory": "A-299",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-747-5833"
+    },
+    {
+      "shop": 2,
+      "id": 21,
+      "inventory": "Ф060 (15060)",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 22,
+      "inventory": "A234",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-848-8159"
+    },
+    {
+      "shop": 2,
+      "id": 23,
+      "inventory": "А618",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 24,
+      "inventory": "А619",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 25,
+      "inventory": "А0017",
+      "model": "ВД-306",
+      "manufacturer": "----",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 26,
+      "inventory": "МЦ290",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 27,
+      "inventory": "МЦ289",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 28,
+      "inventory": "МЦ291",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 29,
+      "inventory": "----",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 30,
+      "inventory": "Ф0116",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 31,
+      "inventory": "Ф091",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 32,
+      "inventory": "Н0015 (не рабоч)",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 33,
+      "inventory": "Н0030 (не рабоч)",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 34,
+      "inventory": "А17  (не рабоч)",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 35,
+      "inventory": "Н0015",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-842-7966"
+    },
+    {
+      "shop": 2,
+      "id": 36,
+      "inventory": "А264",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-849-8200"
+    },
+    {
+      "shop": 2,
+      "id": 37,
+      "inventory": "А265",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-850-8213"
+    },
+    {
+      "shop": 2,
+      "id": 38,
+      "inventory": "А266",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-850-8204"
+    },
+    {
+      "shop": 2,
+      "id": 39,
+      "inventory": "Н0191",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-050-0574"
+    },
+    {
+      "shop": 2,
+      "id": 40,
+      "inventory": "А298",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-817-7450"
+    },
+    {
+      "shop": 2,
+      "id": 41,
+      "inventory": "А297",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-823-7537"
+    },
+    {
+      "shop": 2,
+      "id": 42,
+      "inventory": "А296",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-747-6844"
+    },
+    {
+      "shop": 2,
+      "id": 43,
+      "inventory": "А295",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-840-7942"
+    },
+    {
+      "shop": 2,
+      "id": 44,
+      "inventory": "А291",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-550-4084"
+    },
+    {
+      "shop": 2,
+      "id": 45,
+      "inventory": "А272",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-850-8203"
+    },
+    {
+      "shop": 2,
+      "id": 46,
+      "inventory": "Н0067",
+      "model": "ПСТ-161",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 2,
+      "id": 47,
+      "inventory": "Н0010",
+      "model": "Аппарат Плазменной Резки GACKL 33H",
+      "manufacturer": "Jaeckle",
+      "serial": "----"
+    },
+    {
+      "shop": "3",
+      "id": 48,
+      "inventory": "A489",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "options": [
+    {
+      "model": "ПСТ-251",
+      "characteristics": "ехнические характеристики.\nПитающая сеть - трехфазная 380В 50Гц;\nПотребляемая мощность, кВА, не более - 16,5;\nМаксимальный сварочный ток при ПВ 20, А - 250;\nДопустимый сварочный ток при ПВ 100 , А - 150;\nПорог срабатывания защиты от перегрузки по току, А - 300;\nНапряжение холостого хода, не более, В - 40;\nДиаметр электродной проволоки, мм - 0,8...1,2;\nДиапазон регулирования скорости подачи электродной проволоки, м/мин - 2…16;\nВместимость катушки для электродной проволоки, кг, не менее - 6;\nМаксимальное расстояние между сварочным выпрямителем и узлом подачи электродной проволоки, м - 5;\nГабаритные размеры, мм, не более:\nсварочного выпрямителя - 500х800х600;\nузла подачи электродной проволоки - 250х220х400;\nМасса, кг, не более:\nсварочного выпрямителя - 100;\nузла подачи электродной проволоки - 15;"
+    }
+  ],
+  "PST-251": [
+    {
+      "model": "ПСТ-251",
+      "characteristics": "ехнические характеристики.\nПитающая сеть - трехфазная 380В 50Гц;\nПотребляемая мощность, кВА, не более - 16,5;\nМаксимальный сварочный ток при ПВ 20, А - 250;\nДопустимый сварочный ток при ПВ 100 , А - 150;\nПорог срабатывания защиты от перегрузки по току, А - 300;\nНапряжение холостого хода, не более, В - 40;\nДиаметр электродной проволоки, мм - 0,8...1,2;\nДиапазон регулирования скорости подачи электродной проволоки, м/мин - 2…16;\nВместимость катушки для электродной проволоки, кг, не менее - 6;\nМаксимальное расстояние между сварочным выпрямителем и узлом подачи электродной проволоки, м - 5;\nГабаритные размеры, мм, не более:\nсварочного выпрямителя - 500х800х600;\nузла подачи электродной проволоки - 250х220х400;\nМасса, кг, не более:\nсварочного выпрямителя - 100;\nузла подачи электродной проволоки - 15;"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

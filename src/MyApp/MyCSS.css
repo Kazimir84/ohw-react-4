@@ -1,0 +1,75 @@
+table {
+
+}
+th {
+    padding: 20px;
+    border: 1px solid;
+}
+td {
+    border: 1px solid;
+}
+tr {
+
+}
+.remove {
+    display: grid;
+    background-color: blue;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.remove:hover {
+    color: red;
+}
+.removeTd {
+    background-color: blue;
+}
+a {
+    text-decoration: none;
+    color: aquamarine;
+    cursor: pointer;
+}
+a:hover {
+    color: red;
+}
+.btnAddEqw {
+    padding: 10px;
+    margin: 20px 10px;
+    border: 1px solid;
+    border-color: springgreen;
+    border-radius: 10px;
+}
+.btnAddEqw:hover {
+    background-color: blue;
+    cursor: pointer;
+    color: bisque;
+}
+input {
+    padding: 10px;
+    margin: 0 10px;
+    width: 15%;
+    text-align: center;
+    text-shadow: 0 0 black;
+}
+input:hover {
+    background-color: springgreen;
+}
+
+.hiddenSetting {
+    display: none;
+}
+.BackToList {
+    padding: 10px;
+    margin: 20px 10px;
+    border: 1px solid;
+    border-color: springgreen;
+    border-radius: 10px;
+}
+.BackToList:hover {
+    background-color: blue;
+    cursor: pointer;
+    color: bisque;
+}
+img {
+    width: 30%;
+}
