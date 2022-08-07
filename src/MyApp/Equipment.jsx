@@ -6,7 +6,7 @@ import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 
 const PASSWORD = 'admin';
 const URL = 'http://localhost:3001/equipments';
-// const URL = 'https://github.com/Kazimir84/ohw-react-4/blob/main/src/db/db.json'
+// const URL = 'https://kazimir84.github.io/Server_db'
 
 export default class Equipment extends React.Component {
     constructor(props) {
