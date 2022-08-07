@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const URL = 'http://localhost:30001/equipments';
+const URL = 'http://localhost:3001/equipments';
 
 const newEquipment = {
     shop: 'Данные небыли введены',

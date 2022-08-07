@@ -165,6 +165,11 @@ export default class Equipment extends React.Component {
                 const URLEnergy = 'https://energy-welding.com/';
                 this.setState({linkManufacturer: URLEnergy});
                 break;
+            case 'Welding Dragon':
+                const URLWelding_Dragon = 'https://weldingdragon.ua/ua/';
+                this.setState({linkManufacturer: URLWelding_Dragon});
+                break;
+
             default:
                 this.setState({linkManufacturer: 'No'});
         }

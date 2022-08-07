@@ -575,6 +575,62 @@
       "model": "Н/а MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
       "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 73,
+      "inventory": "Н-61",
+      "model": "ПСТ-161",
+      "manufacturer": "Темп-С",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 74,
+      "inventory": "A-453 A-480",
+      "model": "Digi TIG 320P Блок охолодження WC 10",
+      "manufacturer": "Welding Dragon",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 75,
+      "inventory": "А-162 А-163",
+      "model": "JASIC TIG 315P TIG 315Р Блок охолодження WCN 370B",
+      "manufacturer": "JASIC",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 76,
+      "inventory": "А-573",
+      "model": "DEX PM3000",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 77,
+      "inventory": "----",
+      "model": "SSVA 180-Р",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 78,
+      "inventory": "----",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 79,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
     }
   ],
   "comments": [
