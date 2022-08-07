@@ -224,26 +224,31 @@ export default class Equipment extends React.Component {
                                     <tr>
                                         <td>
                                             <span onClick={this.changeShopEquipment}
-                                                  className='spanLink'>{equipments.shop}</span>
+                                                  className='spanLink'>{equipments.shop}
+                                            </span>
                                         </td>
                                         <td>
                                             {equipments.id}
                                         </td>
                                         <td>
                                             <a onClick={this.visibleSettings} target='_blank'
-                                               rel="noopener noreferrer">{equipments.model}</a>
+                                               rel="noopener noreferrer">{equipments.model}
+                                            </a>
                                         </td>
                                         <td>
                                             <span onClick={this.changeInventoryEquipment}
-                                                  className='spanLink'>{equipments.inventory}</span>
+                                                  className='spanLink'>{equipments.inventory}
+                                            </span>
                                         </td>
                                         <td>
                                             <span onClick={this.changeSerialEquipment}
-                                                  className='spanLink'>{equipments.serial}</span>
+                                                  className='spanLink'>{equipments.serial}
+                                            </span>
                                         </td>
                                         <td>
                                             <a onClick={this.linkManufacturer}
-                                               href={this.state.linkManufacturer}>{equipments.manufacturer}</a>
+                                               href={this.state.linkManufacturer}>{equipments.manufacturer}
+                                            </a>
                                         </td>
                                         <RemoveEquipment/>
                                     </tr>

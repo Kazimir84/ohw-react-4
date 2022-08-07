@@ -631,6 +631,62 @@
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
       "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 80,
+      "inventory": "А236",
+      "model": "ESAB Origio Mig C340 PRO",
+      "manufacturer": "ESAB",
+      "serial": "627-550-4082"
+    },
+    {
+      "shop": 5,
+      "id": 81,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 82,
+      "inventory": "A300",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-849-8198"
+    },
+    {
+      "shop": 5,
+      "id": 83,
+      "inventory": "----",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-732-6460"
+    },
+    {
+      "shop": 5,
+      "id": 84,
+      "inventory": "A269",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-551-4099"
+    },
+    {
+      "shop": 5,
+      "id": 85,
+      "inventory": "----",
+      "model": "Origio MIG 340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-050-0571"
+    },
+    {
+      "shop": 5,
+      "id": 86,
+      "inventory": "A17",
+      "model": "ПСТ-251",
+      "manufacturer": "Темп-С",
+      "serial": "----"
     }
   ],
   "comments": [
