@@ -6,7 +6,8 @@ import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 
 const PASSWORD = 'admin';
 const URL = 'http://localhost:3001/equipments';
-// const URL = 'https://kazimir84.github.io/Server_db'
+// const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json'
+
 
 export default class Equipment extends React.Component {
     constructor(props) {
@@ -38,6 +39,7 @@ export default class Equipment extends React.Component {
     };
 
     visibleSettings = event => {
+        console.log('wewewewew', event.nativeEvent.path[1].innerText)
         if (this.state.nameEquipment === null) {
             let nameEquipment = event.nativeEvent.path[0].textContent;
             this.setState({nameEquipment: nameEquipment});
@@ -64,7 +66,7 @@ export default class Equipment extends React.Component {
             if (newValue !== null) {
                 let target = this.state.equipment.find((index => index.id === id));
                 target.inventory = newValue;
-                const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`;
+                const URLPUT = `http://localhost:3001/equipments/${target.id.toString()}`;
                 axios.put(URLPUT, target)
                     .then(response => {
                         alert(`Инвентарный Номер изменен c ${oldValue} на ${newValue} успешно!`);
@@ -89,7 +91,7 @@ export default class Equipment extends React.Component {
                 if (newValue !== null) {
                     let target = this.state.equipment.find((index => index.id === id));
                     target.shop = newValue;
-                    const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`;
+                    const URLPUT = `http://localhost:3001/equipments/${target.id.toString()}`;
                     axios.put(URLPUT, target)
                         .then(response => {
                             alert(`Номер Цеха изменен c ${oldValue} на ${newValue} успешно!`);
@@ -114,7 +116,7 @@ export default class Equipment extends React.Component {
             if (newValue !== null) {
                 let target = this.state.equipment.find((index => index.id === id));
                 target.serial = newValue;
-                const URLPUT = `http://localhost:3000/equipments/${target.id.toString()}`
+                const URLPUT = `http://localhost:3001/equipments/${target.id.toString()}`
                 axios.put(URLPUT, target)
                     .then(response => {
                         alert(`Серийный номер аппарата изменен c ${oldValue} на ${newValue} успешно!`);
@@ -213,7 +215,7 @@ export default class Equipment extends React.Component {
                                 Производитель
                             </th>
                             <th>
-
+                                <a href='#endTable'>В конец страницы &#8595;</a>
                             </th>
                         </tr>
                         </thead>
@@ -258,7 +260,7 @@ export default class Equipment extends React.Component {
                         </tbody>
                         <tfoot>
                         <h4>
-                            <div>
+                            <div id='endTable'>
                                 End of Table
                                 <h5>
                                     Общее колличество сварочного оборудования = {this.state.equipment.length} шт.

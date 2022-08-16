@@ -38,6 +38,7 @@ a:hover {
     border: 1px solid;
     border-color: springgreen;
     border-radius: 10px;
+    background-color: gold;
 }
 .btnAddEqw:hover {
     background-color: blue;

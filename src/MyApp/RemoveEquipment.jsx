@@ -3,6 +3,7 @@ import axios, {Axios} from "axios";
 
 const PASSWORD = 'admin';
 const URL = "http://localhost:30001/equipments";
+// const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json'
 
 export default class RemoveEquipment extends React.Component {
     constructor(props) {

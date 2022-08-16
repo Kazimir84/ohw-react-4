@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 
 const URL = 'http://localhost:3001/equipments';
+// const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json'
+
 
 const newEquipment = {
     shop: 'Данные небыли введены',

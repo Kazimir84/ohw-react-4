@@ -36,7 +36,7 @@
       "shop": 1,
       "id": 5,
       "inventory": "A302",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "serial": "----",
       "manufacturer": "ESAB"
     },
@@ -44,7 +44,7 @@
       "shop": 1,
       "id": 6,
       "inventory": "A301",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "serial": "----",
       "manufacturer": "ESAB"
     },
@@ -52,7 +52,7 @@
       "shop": 1,
       "id": 7,
       "inventory": "A271",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "serial": "----",
       "manufacturer": "ESAB"
     },
@@ -92,7 +92,7 @@
       "shop": 2,
       "id": 12,
       "inventory": "A267",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-805-7076"
     },
@@ -100,7 +100,7 @@
       "shop": 2,
       "id": 13,
       "inventory": "H0030",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4087"
     },
@@ -140,7 +140,7 @@
       "shop": 2,
       "id": 18,
       "inventory": "A376",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-747-6845"
     },
@@ -148,7 +148,7 @@
       "shop": 2,
       "id": 19,
       "inventory": "A270",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-850-8210"
     },
@@ -156,7 +156,7 @@
       "shop": 2,
       "id": 20,
       "inventory": "A-299",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-747-5833"
     },
@@ -172,7 +172,7 @@
       "shop": 2,
       "id": 22,
       "inventory": "A234",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-848-8159"
     },
@@ -276,7 +276,7 @@
       "shop": 2,
       "id": 35,
       "inventory": "Н0015",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-842-7966"
     },
@@ -284,7 +284,7 @@
       "shop": 2,
       "id": 36,
       "inventory": "А264",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-849-8200"
     },
@@ -292,7 +292,7 @@
       "shop": 2,
       "id": 37,
       "inventory": "А265",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-850-8213"
     },
@@ -300,7 +300,7 @@
       "shop": 2,
       "id": 38,
       "inventory": "А266",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-850-8204"
     },
@@ -308,7 +308,7 @@
       "shop": 2,
       "id": 39,
       "inventory": "Н0191",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-050-0574"
     },
@@ -316,7 +316,7 @@
       "shop": 2,
       "id": 40,
       "inventory": "А298",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-817-7450"
     },
@@ -324,7 +324,7 @@
       "shop": 2,
       "id": 41,
       "inventory": "А297",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-823-7537"
     },
@@ -332,7 +332,7 @@
       "shop": 2,
       "id": 42,
       "inventory": "А296",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-747-6844"
     },
@@ -340,7 +340,7 @@
       "shop": 2,
       "id": 43,
       "inventory": "А295",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-840-7942"
     },
@@ -348,7 +348,7 @@
       "shop": 2,
       "id": 44,
       "inventory": "А291",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4084"
     },
@@ -356,7 +356,7 @@
       "shop": 2,
       "id": 45,
       "inventory": "А272",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-850-8203"
     },
@@ -404,7 +404,7 @@
       "shop": 3,
       "id": 51,
       "inventory": "A0002",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-807-7132"
     },
@@ -412,7 +412,7 @@
       "shop": 3,
       "id": 52,
       "inventory": "H0101",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-529-3571"
     },
@@ -420,7 +420,7 @@
       "shop": 3,
       "id": 53,
       "inventory": "A0190",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4085"
     },
@@ -428,7 +428,7 @@
       "shop": 3,
       "id": 54,
       "inventory": "----",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-051-0579"
     },
@@ -436,7 +436,7 @@
       "shop": 3,
       "id": 55,
       "inventory": "A0004",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-833-7798"
     },
@@ -444,7 +444,7 @@
       "shop": 3,
       "id": 56,
       "inventory": "A0191",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4089"
     },
@@ -452,7 +452,7 @@
       "shop": 3,
       "id": 57,
       "inventory": "----",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-050-0578"
     },
@@ -460,7 +460,7 @@
       "shop": 3,
       "id": 58,
       "inventory": "----",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-041-0351"
     },
@@ -468,7 +468,7 @@
       "shop": 3,
       "id": 59,
       "inventory": "A245",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-747-6847"
     },
@@ -484,7 +484,7 @@
       "shop": 3,
       "id": 61,
       "inventory": "----",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-833-7798"
     },
@@ -492,7 +492,7 @@
       "shop": 3,
       "id": 62,
       "inventory": "A0001",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-814-7367"
     },
@@ -500,7 +500,7 @@
       "shop": 3,
       "id": 63,
       "inventory": "A0003",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-731-6425"
     },
@@ -516,7 +516,7 @@
       "shop": 3,
       "id": 65,
       "inventory": "A244",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-731-6426"
     },
@@ -540,7 +540,7 @@
       "shop": 3,
       "id": 68,
       "inventory": "А0189",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-810-7221"
     },
@@ -564,7 +564,7 @@
       "shop": 3,
       "id": 71,
       "inventory": "Н0196",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-924-8889"
     },
@@ -572,7 +572,7 @@
       "shop": 3,
       "id": 72,
       "inventory": "----",
-      "model": "Н/а MEGMEET Ehave CM500",
+      "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
       "serial": "----"
     },
@@ -636,7 +636,7 @@
       "shop": 5,
       "id": 80,
       "inventory": "А236",
-      "model": "ESAB Origio Mig C340 PRO",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4082"
     },
@@ -652,7 +652,7 @@
       "shop": 5,
       "id": 82,
       "inventory": "A300",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-849-8198"
     },
@@ -660,7 +660,7 @@
       "shop": 5,
       "id": 83,
       "inventory": "----",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-732-6460"
     },
@@ -668,7 +668,7 @@
       "shop": 5,
       "id": 84,
       "inventory": "A269",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-551-4099"
     },
@@ -676,7 +676,7 @@
       "shop": 5,
       "id": 85,
       "inventory": "----",
-      "model": "Origio MIG 340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-050-0571"
     },
@@ -687,6 +687,278 @@
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
       "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 87,
+      "inventory": "А0103 А0108 А0105 А0107",
+      "model": "ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus",
+      "manufacturer": "ESAB",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 88,
+      "inventory": "А5083 Н0103 Н108 Н0105 Н0107",
+      "model": "ESAB Aristo Mig Pulse ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus",
+      "manufacturer": "ESAB",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 89,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 90,
+      "inventory": "----",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-550-4083"
+    },
+    {
+      "shop": 5,
+      "id": 91,
+      "inventory": "А233",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 92,
+      "inventory": "----",
+      "model": "JASIC MIG 400",
+      "manufacturer": "JASIC",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 93,
+      "inventory": "----",
+      "model": "JASIC MIG 400",
+      "manufacturer": "JASIC",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 94,
+      "inventory": "А0094",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 95,
+      "inventory": "----",
+      "model": "Аппарат Плазменной Резки GACKL 33H",
+      "manufacturer": "Jaeckle",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 96,
+      "inventory": "А454",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 97,
+      "inventory": "----",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 98,
+      "inventory": "А232",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-551-4101"
+    },
+    {
+      "shop": 5,
+      "id": 99,
+      "inventory": "А235",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-747-6837"
+    },
+    {
+      "shop": 5,
+      "id": 100,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 101,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 102,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 103,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 104,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "----"
+    },
+    {
+      "shop": 5,
+      "id": 105,
+      "inventory": "А231",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-550-4088"
+    },
+    {
+      "shop": 9,
+      "id": 106,
+      "inventory": "А-323",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-049-0521"
+    },
+    {
+      "shop": 9,
+      "id": 107,
+      "inventory": " А5 022",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "677-551-4102"
+    },
+    {
+      "shop": 9,
+      "id": 108,
+      "inventory": "А0129",
+      "model": "ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus",
+      "manufacturer": "ESAB",
+      "serial": "323-546-2301"
+    },
+    {
+      "shop": 9,
+      "id": 109,
+      "inventory": "А279",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-831-7758"
+    },
+    {
+      "shop": 9,
+      "id": 110,
+      "inventory": "Н0187",
+      "model": "Энергия ПДГУ-500",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "5000282"
+    },
+    {
+      "shop": 9,
+      "id": 111,
+      "inventory": "Н0188",
+      "model": "Энергия ПДГУ-500",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "5000294"
+    },
+    {
+      "shop": 9,
+      "id": 112,
+      "inventory": "У2 001",
+      "model": "JASIC MIG 315F",
+      "manufacturer": "JASIC",
+      "serial": "----"
+    },
+    {
+      "shop": 9,
+      "id": 113,
+      "inventory": " А5 023",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-924-8884"
+    },
+    {
+      "shop": 9,
+      "id": 114,
+      "inventory": "А-292",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-732-6458"
+    },
+    {
+      "shop": 9,
+      "id": 115,
+      "inventory": "Ф203",
+      "model": "БУРАН ПДГ-315",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "----"
+    },
+    {
+      "shop": 9,
+      "id": 116,
+      "inventory": "А440",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 9,
+      "id": 117,
+      "inventory": "Ф45",
+      "model": "БУРАН ПДГ-315",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "ремонт (на спис.)"
+    },
+    {
+      "shop": 9,
+      "id": 118,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "ZF030037212600161"
+    },
+    {
+      "shop": 9,
+      "id": 119,
+      "inventory": "A338",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----"
+    },
+    {
+      "shop": 9,
+      "id": 120,
+      "inventory": "Н0186",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-835-7828"
     }
   ],
   "comments": [
