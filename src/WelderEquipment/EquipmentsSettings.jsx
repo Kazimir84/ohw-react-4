@@ -21,9 +21,13 @@ import LogoMEGMEET_Ehave_CM500 from './Img/MEGMEET_Ehave_CM500.jpg';
 import LogoESABPuls from './Img/ESAB_Aristo_Mig_Pulse_COOL ESAB_AristoR_Feed_3004_Пульт_AristoR_U82_Plus.png';
 import LogoJASIC_MIG_400 from './Img/jasic-mig-400.jpeg';
 import LogoBURAN_PDG_315 from './Img/pdg-315-buran.jpg';
+import LogoCUT_60 from './Img/plazmorez-tesla-cut.jpg';
+import LogoPanasonicRobot from './Img/Panasonic.png';
+import Logo_Megmeet_Asten_CM500 from './Img/Logo_Megmeet_Asten_CM500.jpg';
 
 import MyCSS from "../MyApp/MyCSS.css"
 import Equipment from "../MyApp/Equipment";
+import ShopEquipments from "../MyApp/ShopEquioments";
 
 
 export default class EquipmentsSettings extends React.Component {
@@ -34,10 +38,32 @@ export default class EquipmentsSettings extends React.Component {
     }
 
     backToList = event => {
-        let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[0];
-        divHiddenSetting.classList.toggle("hiddenSetting");
-        let divVisibleSettings = document.querySelectorAll(".visibleSettings")[1];
-        divVisibleSettings.classList.toggle("hiddenSetting");
+        if (this.props.selectedShop != null) {
+            let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[0];
+            divHiddenSetting.classList.toggle("hiddenSetting");
+
+            let visibleShopList = document.querySelectorAll(".visibleShopList")[0];
+            visibleShopList.classList.toggle("hiddenShopList");
+
+            let divVisibleSettings = document.querySelectorAll(".visibleSettings")[2];
+            divVisibleSettings.classList.toggle("hiddenSetting");
+
+            // ===== Show Buttons Shops
+            let divVisibleShopButton = document.querySelectorAll(".divVisibleShopButton")[0];
+            divVisibleShopButton.classList.toggle("hiddenSetting");
+            // ====
+            document.location.reload();
+        } else {
+            let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[0];
+            divHiddenSetting.classList.toggle("hiddenSetting");
+            let divVisibleSettings = document.querySelectorAll(".visibleSettings")[1];
+            divVisibleSettings.classList.toggle("hiddenSetting");
+            // ===== Show Buttons Shops
+            let divVisibleShopButton = document.querySelectorAll(".divVisibleShopButton")[0];
+            divVisibleShopButton.classList.toggle("hiddenSetting");
+            // ====
+            document.location.reload();
+        }
     }
 
     render() {
@@ -84,7 +110,7 @@ export default class EquipmentsSettings extends React.Component {
                             сварочного выпрямителя - 100;
                             узла подачи электродной проволоки - 15;
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 );
                 break;
@@ -146,7 +172,7 @@ export default class EquipmentsSettings extends React.Component {
                             Привариваемый точечный
                             Вес: 114 кг
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 );
                 break;
@@ -169,7 +195,7 @@ export default class EquipmentsSettings extends React.Component {
                             титана и их и сплавов.
                             МТР РАДИАН ― 1500 Пл относится к портальному типу машин термической резки с ЧПУ с
                             плазменной технологической частью.
-                            Подробнее: https://abiznes.prom.ua/p189679112-mashina-plazmennoj-rezki.html
+                            Подробнее:  <a href='https://abiznes.prom.ua/p189679112-mashina-plazmennoj-rezki.html'>Подробнее: https://abiznes.prom.ua/p189679112-mashina-plazmennoj-rezki.html</a>
                             <p>
                                 Высокое качество изготовления и комплектующих обеспечивают длительный срок эксплуатации;
                                 Дополнительный запас хода (100 мм по длине и 50 мм по ширине листа) позволяет
@@ -226,7 +252,86 @@ export default class EquipmentsSettings extends React.Component {
                             работ, а также термоизоляцию исполнительного механизма, что важно для обеспечения
                             стабильности и точности исполнительного механизма.
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
+                    </div>
+                )
+            case 'Машина плазменной резки ЧПУ Radian-2000':
+                return (
+                    <div className='visibleSettings hiddenSetting'>
+                        <h2>
+                            Машина плазменной резки ЧПУ Radian-2000
+                        </h2>
+                        <span>
+                            <img src={LogoRadian_1500} alt="Radian"/>
+                        </span>
+                        <h3>
+                            Описание Оборудования
+                        </h3>
+                        <p>
+                            Станок РАДИАН-2000Пл — машина плазменной резки с ЧПУ для фигурного автоматического
+                            программируемого раскроя листового металлического проката шириной до 1500 мм. Выполняет
+                            вырезку заготовок и деталей из углеродистых и нержавеющих сталей, цветных металлов,
+                            титана и их и сплавов.
+                            МТР РАДИАН ― 2000 Пл относится к портальному типу машин термической резки с ЧПУ с
+                            плазменной технологической частью.
+                            <a href='https://abiznes.prom.ua/p189679112-mashina-plazmennoj-rezki.html'>Подробнее: https://abiznes.prom.ua/p189679112-mashina-plazmennoj-rezki.html</a>
+                            <p>
+                                Высокое качество изготовления и комплектующих обеспечивают длительный срок эксплуатации;
+                                Дополнительный запас хода (100 мм по длине и 50 мм по ширине листа) позволяет
+                                обрабатывать листы с увеличенным размером, а так же упрощает укладку листа на
+                                раскройный стол;
+                                Автоматическая система установки первоначальной высоты плазмотрона надёжно работает
+                                даже при наличии диэлектрика на поверхности металла (плакирования, краски, ржавчины и т.п.);
+                                Бесконтактная стабилизация рабочего зазора в процессе резки по напряжению в дуге.
+                            </p>
+                            <h4>Технические характеристики.</h4>
+                            Тип исполнительного механизма	портальный
+                            Способ перемещения портала	консоль
+                            Габариты обрабатываемого листа (мм), не менее:	-
+                            ― для машин под лист длиной 3000 мм	1550 х 3100
+                            ― для машин под лист длиной 6000 мм	1550 х 6100
+                            Габариты машины (без учёта проходов, рабочего места оператора, источника тока и компрессора), мм	-
+                            ― для машин под лист длиной 3000 мм	2700 х 5000
+                            ― для машин под лист длиной 6000 мм	2700 х 8000
+                            Количество суппортов	1
+                            Количество резаков (плазмотронов)	1
+                            Минимальная скорость перемещения (мм/мин), не более	1
+                            Максимальная скорость (мм/мин), не менее:	-
+                            ― позиционирования (холостого хода)	8000
+                            ― контурная (резки)	6000
+                            Точность вырезаемых деталей, качество поверхности реза по ГОСТ 14792-80	класс 1
+                            Климатическое исполнение машины по ГОСТ 15150-69	УХЛ4
+                        </p>
+                        <h5>
+                            Машина плазменной резки РАДИАН ― 2000 Пл состоит из следующих основных частей:
+                        </h5>
+                        <p>
+                            Исполнительный механизм Radian® ― 2000, в т.ч.:
+                            ― линейные направляющие фирмы REXROTH (Германия)
+                            ― координатные приводы и двигатели фирмы Delta Electronics (Япония)
+                            ― координатные безлюфтовые планетарные редукторы TECHNO (Италия)
+                            ― траковые энергоподводы (кабельные цепи) фирмы IGUS (Германия)
+                            ― рельсовый путь под лист длиной 3000 (6000) мм, силовой, с системой регулировки
+                            ЧПУ CNC Radian® ― 505*
+                            Система плазменной резки PowerMax 105**
+                            Раскройный стол водонаполняемый (опция)***
+                            * Панель управления ― моноблочный компьютер промышленного исполнения с сенсорным экраном и
+                            лицензионной операционной системой Windows® 7 ― позволяет быстро обучать обслуживающий
+                            персонал, легко выполнять загрузку управляющих программ (УП) и обмен информацией, а также
+                            использовать панель управления для подготовки УП.
+
+                            ** Машина РАДИАН ― 2000 Пл может быть укомплектована любой из предложенных ниже систем
+                            плазменной резки, что в конечном итоге определяет параметры резки и окончательную
+                            стоимость машины:
+
+                            Hypertherm PowerMax
+                            JÄCKLE Plasma
+                            *** Раздельная конструкция исполнительного механизма машины и раскройного стола
+                            обеспечивает стойкость к ударам, неизбежным при выполнении погрузочно-разгрузочных
+                            работ, а также термоизоляцию исполнительного механизма, что важно для обеспечения
+                            стабильности и точности исполнительного механизма.
+                        </p>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
             case 'SSVA-160-2':
@@ -305,7 +410,7 @@ export default class EquipmentsSettings extends React.Component {
                             Применение	MMA
                             Вес	10,0 кг
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -371,11 +476,11 @@ export default class EquipmentsSettings extends React.Component {
                             Вес	57 кг
                             Бренд	Jasic
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
-            case 'MEGMEET Ehave CM-350':
+            case 'MEGMEET Ehave CM350':
                 return (
                     <div className='visibleSettings hiddenSetting'>
                         <h2>
@@ -438,7 +543,7 @@ export default class EquipmentsSettings extends React.Component {
                             Диаметр проволоки	1,0-1,2-1,6
                             Гарантия	2 год
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -475,7 +580,7 @@ export default class EquipmentsSettings extends React.Component {
                             Габарити 690х360х640 міліметрів
                             Вага 86 кілограмів
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -524,7 +629,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Масса, не более, 65 кг</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -585,7 +690,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Вес 30 кг</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -657,7 +762,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Масса, кг	120</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -714,7 +819,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Вес	 15,0 кг</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -789,7 +894,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Масса, кг	40</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -885,7 +990,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Масса, кг	70</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -986,7 +1091,7 @@ export default class EquipmentsSettings extends React.Component {
                                 </ol>
                             </div>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1107,7 +1212,7 @@ export default class EquipmentsSettings extends React.Component {
                                 </ol>
                             </div>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1160,7 +1265,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Масса	25,4 кг</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1215,7 +1320,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Масса, не более, кг	15</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1288,7 +1393,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Диаметр проволоки	1,0-1,2-1,6)</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1348,7 +1453,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Розміри ДхШхВ  625x394x776</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1408,7 +1513,7 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Розміри ДхШхВ  625x394x776</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1474,7 +1579,7 @@ export default class EquipmentsSettings extends React.Component {
                             Вес	41 кг
                             Бренд	Jasic
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1548,7 +1653,345 @@ export default class EquipmentsSettings extends React.Component {
                                 <li>Габаритные размеры, мм (с тележкой) Д/Ш/В	830/380/700</li>
                             </ol>
                         </p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
+                    </div>
+                )
+                break;
+            case 'CUT-60':
+                return (
+                    <div className='visibleSettings hiddenSetting'>
+                        <h2>
+                            CUT-60
+                        </h2>
+                        <span>
+                            <img src={LogoCUT_60} alt="CUT-60"/>
+                        </span>
+                        <h3>
+                            Описание Оборудования
+                        </h3>
+                        <p>
+                            Позволяет резать металлы толщиной до 20 мм (максимальный рез, чистовой — до 15 мм).
+                            <div>ВЕНТИЛЯТОР ДИАМЕТРОМ 115 ММ</div>
+                            Отвечает за принудительное охлаждение внутренних компонентов аппарата.
+                            <div>ВСТРОЕННЫЙ РЕДУКТОР С МАНОМЕТРОМ И ВЛАГООТДЕЛИТЕЛЕМ</div>
+                            Расположены в задней части аппарата.Редуктор позволяет отрегулировать давление воздуха,
+                            поступающего от компрессора.Аналоговый манометр предназначен для контроля давления.
+                            Влагоотделитель очищает подаваемый воздух от влаги для бесперебойной работы аппарата.
+                            <div>ВЫСОКОЧАСТОТНЫЙ ПОДЖИГ ДУГИ</div>
+                            Предусмотрена кнопка для бесконтактного поджига дуги на плазмотроне.
+                            <div>УКОМПЛЕКТОВАН ПЛАЗМОТРОНОМ SG 55</div>
+                            Длина шланга — 5 м.
+                            <div>ТРИ ИНДИКАТОРА</div>
+                            Зеленый — нормальная работа/сеть подключена, желтый — перегрев, красный — авария (несоответствие напряжения сети).
+
+                            <div>ПЕРЕКЛЮЧАТЕЛЬ НА 2 ПОЛОЖЕНИЯ</div>
+                            1-е: тест воздуха;2-е: резка (рабочий режим).
+
+                            <p>Видео обзор аппарата
+                                <div>
+                                    <iframe width="520" height="293" src="https://www.youtube.com/embed/sgc3wCnSLLo"
+                                            title="Плазморез Тесла Велд КАТ 60. Разборка аппарата." frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen></iframe>
+                                </div>
+                            </p>
+                            <h4>Технические характеристики.</h4>
+                            <ol>
+                                <li>Продолжительность включения (ПВ), %	60</li>
+                                <li>Источник энергии для сварки	плазменная струя</li>
+                                <li>CUT (воздушно-плазменная резка)	да</li>
+                                <li>Сварочный ток мин. (CUT), А	30</li>
+                                <li>Сварочный ток макс. (CUT), А	60</li>
+                                <li>Толщина реза, чистовой/максимальный, мм	15/20</li>
+                                <li>Расход воздуха, л/мин	200</li>
+                                <li>Номинальное давление воздуха, Атм	6.5</li>
+                                <li>Поджиг дуги плазмотрона	Высокочастотный</li>
+                                <li>Пилотная дуга	нет</li>
+                                <li>Напряжение холостого хода (CUT), В	265</li>
+                                <li>Рабочее напряжение на дуге (CUT), В	108</li>
+                                <li>Напряжение питающей сети, В	380</li>
+                                <li>Потребляемый ток (CUT), А	25</li>
+                                <li>Частота питающей сети, Гц	50/60</li>
+                                <li>Потребляемая мощность (CUT), кВт	8.8</li>
+                                <li>Коэффициент полезного действия, %	80</li>
+                                <li>Коэффициент мощности, cos	0.7</li>
+                                <li>Степень защиты	IP21</li>
+                                <li>Класс изоляции	F</li>
+                                <li>Вес, кг	25</li>
+                                <li>Pазмеры (ДхШхВ), мм	542x280x382</li>
+                                <li>Гарантийный срок, мес	36</li>
+                            </ol>
+                        </p>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
+                    </div>
+                )
+                break;
+            case 'Робот для сварки  Panasonic Robot Controller  TA 1400 WG ||| E YA-1WAR61E00  (OM1303030E)':
+                return (
+                    <div className='visibleSettings hiddenSetting'>
+                        <h2>
+                            Робот для сварки  Panasonic
+                        </h2>
+                        <span>
+                            <img src={LogoPanasonicRobot} alt="Робот для сварки  Panasonic Robot Controller  TA 1400 WG ||| E YA-1WAR61E00  (OM1303030E)"/>
+                        </span>
+                        <h3>
+                            Описание Оборудования
+                        </h3>
+                        <p>
+                            TAWERS серии WG3 — широко известные промышленные роботы Panasonic с самыми
+                            уникальными и интегрированными функциями. Эта серия роботов представляет собой
+                            универсальный контроллер с плавким предохранителем, источник сварочного тока и
+                            устройство подачи сервопроволоки в одном устройстве. Он поставляется с различными
+                            классификациями, такими как TA-1000WG3, TA-1400WG3, TA-1600WG3, TA-1800WG3, а также TA-1900WG3.
+
+                            <p>Видео обзор Robot
+                                <div>
+                                    <iframe width="853" height="480" src="https://www.youtube.com/embed/aw2cmDwIWyI"
+                                            title="Производство котлов Альтеп (Altep) - работа сварочного робота"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen></iframe>
+                                </div>
+                            </p>
+                            <h4>Технические характеристики.</h4>
+                            <ol>
+                                <li>Метод TIG, для дуговой сварки, MIG, MAG</li>
+                                <li>Режим функционирования - роботизированное</li>
+                                <li>Другие характеристики - встроенное, высокая скорость</li>
+                            </ol>
+                        </p>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
+                    </div>
+                )
+                break;
+            case 'MEGMEET Artsen CM500':
+                return (
+                    <div className='visibleSettings hiddenSetting'>
+                        <h2>
+                            MEGMEET Artsen CM500
+                        </h2>
+                        <span>
+                            <img src={Logo_Megmeet_Asten_CM500} alt="MEGMEET Artsen CM500"/>
+                        </span>
+                        <h3>
+                            Описание Оборудования
+                        </h3>
+                        <p>
+                            <p>
+                                Artsen CM 500C - это сварочные полуавтоматы предназначенные специально для тех областей
+                            промышленности, где сварщику необходима высокая мобильность, например судостроение,
+                            машиностроение и другие. На устройстве подачи проволоки имеется дополнительная цифровая
+                            панель для удобного управления параметрами сварки.
+                            </p>
+                            <p>
+                                Artsen CM 500C - отраслевой лидер с цифровой двунаправленной высокоскоростной связью.
+                                Предназначен для сварки на сверхдальних расстояниях (до 100 метров) при строительстве
+                                крупных объектов в таких отраслях как судостроение, производство морской техники,
+                                изготовление стальных конструкций и т.д.
+                            </p>
+                            <p>
+                                По статистике 70% сбоев вызвано слабым кабелем управления. Уникальная технология
+                                двусторонней связи панели источника и механизма подачи проволоки, разработанная в
+                                Megmeet, позволяет отойти от традиционного кабеля управления. Это существенно повышает
+                                надежность системы, особенно в условиях сварки на большие расстояния. Дистанция между
+                                источником и областью сварки может достигать 100 м.
+                            </p>
+                            <p>
+                                Artsen CM 500C имеет 100%ПВ при токе 500А и скорость подачи проволоки до 24 м/мин, что
+                                обеспечивает высокую производительность.
+                                Благодаря защищенной конструкции механизма подачи проволоки и PCBA, полуавтомат может
+                                эксплуатироваться в условиях вибрации, влаги, соляного тумана и т.д.
+                                Значения силы тока и напряжения могут быть установлены и отображены непосредственно на
+                                механизме подачи проволоки. Нет необходимости устанавливать дополнительный отладчик и
+                                регулятор на источник.
+                                Высокоскоростная функция двусторонней связи позволяет синхронизировать механизм подачи
+                                проволоки и источник питания.
+                            </p>
+                            <p>
+                                Artsen CM 500C может отображать коды ошибок одновременно на панели источника и механизма
+                                подачи проволоки, а также автоматически восстанавливаться.
+                                Механизм подачи проволоки имеет защиту от перегрузок по току.
+                                Газовый клапан имеет защиту от короткого замыкания и обрыва цепи.
+                                Вес и размер кабелей значительно меньше, тем самым Artsen CM 500C более удобен для
+                                перемещения.
+                                Кабель пакет Artsen CM 500C состоит из трех элементов:
+                                - Силовой кабель от 70 до 95 мм2.
+                                - Кабель управления 4 мм2.
+                                - Газовый шланг.
+                            </p>
+                            Для изготовления достаточно стандартных комплектующих доступных в любом магазине электротехники.
+                            Благодаря применению цифровой связи стабильность управления сохраняется до длины 100 м.
+                            При этом на блоке подачи проволоки доступно полноценное управление режимами сварки и
+                            индикация параметров (сила тока и напряжение).
+
+                            <h4>
+                                Преимущества Artsen CM 500C Megmeet
+                            </h4>
+                            <ol>
+                                <li>Значения силы тока и напряжения могут быть установлены и отображены непосредственно
+                                    на
+                                    механизме подачи проволоки. Нет необходимости устанавливать дополнительный отладчик
+                                    и регуляторы на источник.
+                                </li>
+                                <li>Высокоскоростная функция двусторонней связи позволяет синхронизировать механизм
+                                    подачи
+                                    проволоки и сварочный полуавтомат. Таким образом достигается превосходный сигнал без
+                                    помех.
+                                </li>
+                                <li>Artsen СМ 500С может отображать коды ошибок одновременно на панели источника и
+                                    механизме
+                                    подачи проволоки, а также автоматически восстанавливаться.
+                                </li>
+                                <li>
+                                    Механизм подачи проволоки имеет защиту от перегрузки по току.
+                                </li>
+                                <li>
+                                    Газовый клапан имеет защиту от короткого замыкания и обрыва цепи.
+                                </li>
+                                <li>
+                                    Вес и размер кабелей значительно меньше, поэтому Artsen СМ 500С более удобен для
+                                    перемещения.
+                                </li>
+
+                            Основными преимуществами промышленных полуавтоматов производства MEGMEET являются:
+                            надежность оборудования, постоянство результата и стабильность работы,
+                            применение высоких технологий, высокая экономическая эффективность использования.
+                            </ol>
+
+                            <h4>
+                                Надежность
+                            </h4>
+
+                            Защита класса D от молний и перенапряжения (выдерживает 6000В/3000А).
+                            Оборудование адаптировано для работы в условиях нестабильного питания сети, питания от
+                            генератора, очень длинных кабелей питания, стабильная работа в диапазоне напряжения 380 В, 30-80 Гц.
+                            Возможность работы при температуре от -40 до +50 С, в условиях осадков и высокой влажности до 95%.
+                            Контроль температуры разъемов и предупреждение об их перегреве из-за возможного повреждения.
+                            Успешно пройдены тесты на устойчивость к солевым спреям, металлической пыли и на
+                            электропроводность, тест предельных нагрузок HALT - совмещение всех негативных факторов.
+
+                            <h4>
+                                Технологичность
+                            </h4>
+
+                            Полуавтоматы свободно подключаются к роботам, автоматическому оборудованию и пультам
+                            управления благодаря интерфейсу CAN-BUS и различным протоколам связи.
+                            Уникальная сварочная база данных Megmeet позволила настроить характеристики дуги для
+                            различных условий сварки, существенно повысив работоспособность и допустимое отклонение
+                            автоматических систем сварки.
+                            Благодаря точным цифровым измерениям и системе контроля, Megmeet достигает высокого
+                            качества сварки при режимах от 30 до 500 А, используя один и тот же источник.
+                            Высокоскоростная цифровая система связи (до 500 кГц) позволяет избежать отклонений и
+                            задержек, которые идут от оборудования и повышает время отклика системы.
+                            Прогрессивная работа системы охлаждения регулирует скорость воздушного потока в
+                            зависимости от режимов работы и мощности сварочного тока.
+
+                            <h4>
+                                Постоянство
+                            </h4>
+
+                            Благодаря высокой частоте работы и полностью цифровому управлению, дискретность оборудования
+                            может корректироваться и отклонения между источниками могут быть устранены.
+                            Низкие рабочие температуры и высокая точность обеспечивают одинаковую производительность
+                            в различных условиях.
+                            Превосходный контроль со стороны системы управления обеспечивает одинаковые результаты на
+                            выходе сварочных источников, вне зависимости от внешних факторов.
+
+                            <h4>
+                                Стабильность
+                            </h4>
+
+                            Интеллектуальные машины позволяют снизить количество брызг и сохранить стабильность.
+                            Благодаря технологии компенсации и контроля длины дуги, глубина проплавления и дуга
+                            остаются постоянными при различной длине дуги и различных пространственных положениях.
+                            Технология компенсации напряжения сохраняет значение напряжения постоянным от длины кабеля.
+
+                            <h4>
+                                Конструктивные особенности полуавтоматов Megmeet
+                            </h4>
+
+                            <p>
+                                Мощная электроника, современных компьютерные технологии, глубокое изучение и применение
+                                знаний о свойствах дуги, металлов и сварочных процессов позволили компании Megmeet
+                                разработать прогрессивный полностью цифровой сварочный полуавтомат для
+                                высоконагруженного
+                                промышленного производства.
+                            </p>
+                            <p>
+                                Электрическая схема инверторного блока, работающего на частоте до 64 кГц ( у аналогов до
+                                30 кГц),
+                                разработана на основе использования высоконадежных неполярных конденсаторов (900 V 12
+                                mF+/-5%),
+                                имеющих низкое значение собственной паразитной индуктивности, малые потери и способные
+                                надежно работать на повышенных частотах в устройствах силовой электроники и
+                                преобразовательной техники.
+                            </p>
+                            <p>
+                                Цифровый промышленный полуавтомат серии Dex CM 3000, Megmeet (Китай)
+                                Схема не содержит дорогих, имеющих ограниченный срок службы, высокоёмких
+                                электролитических
+                                конденсаторов (450 V 680 mF+/-15%), что резко повышает надежность работы,
+                                снижает массо-габаритные характеристики, улучшает стабильность сварочных режимов и
+                                снижает стоимость аппарата по сравнению с ближайшими однотипными аналогами.
+                            </p>
+                            <p>
+                                Конструкция силового модуля выполнена в виде двух независимых модулей инверторов на
+                                самых современных силовых элементах IGBT фирмы Infineon Technologies. За счет этого
+                                достигнут повышенный КПД аппарата (PN =100% С) и увеличены мощностные показатели.
+                            </p>
+                            <p>
+                                Печатные платы выполнены по технологии SMD (Surface Mounted Device) монтажа, которая
+                                позволяет существенно снизить стоимость и габариты изделий с одновременным повышением их
+                                надежности.
+                                Использование компактных и высокотехнологичных SMD-компонентов дает возможность повысить
+                                степень интеграции, снизить нагрузку на внутренние источники питания и, как результат -
+                                достигнуть
+                                высокую компактность узлов и блоков аппарата.
+                                Печатные платы выполнены по технологии SMD (Surface Mounted Device) монтажа
+                            </p>
+                            <p>
+                                Микропроцессорная система управления Texas Instruments Inc (США) Задание и контроль
+                                режимов работы осуществляется микропроцессорной системой управления Texas Instruments
+                                Inc(США),
+                                позволяющая вносить изменения и дополнения в программное обеспечение аппарата по
+                                специфическим требованиям Заказчика.
+                                Гибкий коммуникационный протокол и открытые сварочные параметры расширяют возможности и
+                                делают сварку более стабильной и быстрой, а изделие менее подвержено тепловой
+                                деформации.
+                            </p>
+
+                            Оборудование Megmeet разработано под технологию Industry 4.0 (Индустрия 4.0).
+                            Оно ориентировано на взаимодействие деталей в производстве и конечной продукции без
+                            участия человека. Сварочные полуавтоматы Megmeet могут свободно подключаться к
+                            промышленным роботам, автоматическому оборудованию, пультам управления и удаленным
+                            мониторам благодаря интерфейсу CAN-BUS и различным коммуникационным протоколам связи.
+                            Аналоговый интерфейс и все виды цифрового интерфейса в модели робота могут соответствовать
+                            параметрам сварочного аппарата, благодаря чему достигается отличное отслеживание дуги
+                            в соответствии с алгоритмом сварочного робота. Также все параметры сварки можно настроить
+                            и контролировать при помощи панели управления для обеспечения соответствия различным условиям сварки.
+                            <p>Видео обзор аппарата
+                                <div>
+                                    <iframe width="683" height="384" src="https://www.youtube.com/embed/DCmWsF3jRh8"
+                                            title="Цифровые инверторные сварочные полуавтоматы серии Artsen CM/PM, MEGMEET"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen>
+                                    </iframe>
+                                </div>
+                            </p>
+                            <h4>Технические характеристики.</h4>
+                            <ol>
+                                <li>Напряжение сети, В	380 ±10%</li>
+                                <li>Рабочий газ	Инертный газ (CO2) / (CO2-Ar)</li>
+                                <li>Продолжительность включения (ПВ) %	100% 500А</li>
+                                <li>Степень защиты IP	IP23S</li>
+                                <li>Тип сварки	MIG/MAG</li>
+                                <li>Система охлаждения	воздушное</li>
+                                <li>Диаметр проволоки	1,0-1,2-1,6)</li>
+                            </ol>
+                        </p>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
                 break;
@@ -1556,46 +1999,10 @@ export default class EquipmentsSettings extends React.Component {
             default:
                 return (
                     <div className='visibleSettings hiddenSetting'>
-                        <p>NOOOOOOOOOOOOOOOOOOOO</p>
-                        <button onClick={this.backToList} className="BackToList">Back to List</button>
+                        <p>Этого оборудования нет в описании</p>
+                        <button onClick={this.backToList} className="BackToList">Вернуться к списку оборудования</button>
                     </div>
                 )
         }
-        // return (
-        //     <div className='visibleSettings hiddenSetting'>
-        //         <h2>
-        //             ПСТ-251
-        //         </h2>
-        //             <span>
-        //                 <img src={LogoPST251} alt="PST-251"/>
-        //             </span>
-        //         <h3>
-        //             Описание Оборудования
-        //         </h3>
-        //         <p>
-        //             Полуавтомат снабжен переносным узлом подачи электродной проволоки для расширения площади, обслуживаемой без перемещения сварочного выпрямителя.
-        //             Полуавтомат предназначен для эксплуатации в вентилируемых помещениях с искусственно регулируемыми климатическими условиями при отсутствии атмосферных осадков, прямого солнечного излучения при температуре воздуха от +1 до +35°С и относительной влажности до 80 при температуре +25°С.
-        //             Наше предприятие дает гарантию на данное устройство 1 год и послегарантийное обслуживание в течение всего срока эксплуатации.
-        //             <h4>Технические характеристики.</h4>
-        //             Питающая сеть - трехфазная 380В 50Гц;
-        //             Потребляемая мощность, кВА, не более - 16,5;
-        //             Максимальный сварочный ток при ПВ 20, А - 250;
-        //             Допустимый сварочный ток при ПВ 100 , А - 150;
-        //             Порог срабатывания защиты от перегрузки по току, А - 300;
-        //             Напряжение холостого хода, не более, В - 40;
-        //             Диаметр электродной проволоки, мм - 0,8...1,2;
-        //             Диапазон регулирования скорости подачи электродной проволоки, м/мин - 2…16;
-        //             Вместимость катушки для электродной проволоки, кг, не менее - 6;
-        //             Максимальное расстояние между сварочным выпрямителем и узлом подачи электродной проволоки, м - 5;
-        //             Габаритные размеры, мм, не более:
-        //             сварочного выпрямителя - 500х800х600;
-        //             узла подачи электродной проволоки - 250х220х400;
-        //             Масса, кг, не более:
-        //             сварочного выпрямителя - 100;
-        //             узла подачи электродной проволоки - 15;
-        //         </p>
-        //         <button onClick={this.backToList} className="BackToList">Back to List</button>
-        //     </div>
-        // )
     }
 }

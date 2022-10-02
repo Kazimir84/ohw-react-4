@@ -17,6 +17,7 @@ tr {
     border: none;
     color: white;
     cursor: pointer;
+    margin: auto;
 }
 .remove:hover {
     color: red;
@@ -59,6 +60,10 @@ input:hover {
 .hiddenSetting {
     display: none;
 }
+.hiddenShopList {
+    display: none;
+}
+
 .BackToList {
     padding: 10px;
     margin: 20px 10px;
@@ -91,4 +96,32 @@ img {
     color: #333;
     background: #fff;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
+.id {
+    display: none;
+}
+.shop {
+    padding: 10px;
+    margin: 20px 10px;
+    border: 1px solid;
+    border-color: springgreen;
+    border-radius: 10px;
+    background-color: gold;
+}
+.shop:hover {
+    background-color: blue;
+    cursor: pointer;
+    color: bisque;
+}
+.shop>a {
+    color: black;
+}
+.shop>a:hover {
+    color: white;
+}
+.styleShopPage {
+    font-size: 70px;
+    margin: 10px;
+    font-family: serif;
 }

@@ -1,31 +1,31 @@
 import React from "react";
 import axios, {Axios} from "axios";
-import AddNewEquipment from "./AddNewEquipment";
 import RemoveEquipment from "./RemoveEquipment";
+import Equipment from "./Equipment";
 import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
-import ShopEquipments from "./ShopEquioments";
 
-
-const PASSWORD = 'admin';
 const URL = 'http://localhost:3001/equipments';
-// const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json'
+const PASSWORD = 'admin';
 
-export default class Equipment extends React.Component {
+export default class ShopEquipments extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             equipment: [],
+            shopEquipment: [],
+            selectedShop: null,
             error: null,
             nameEquipment: null,
-            nameManufacture: null,
-        };
+        }
         this.props = props;
-        this.visibleSettings = this.visibleSettings.bind(this);
-        this.linkManufacturer = this.linkManufacturer.bind(this);
+        this.backToList = this.backToList.bind(this);
+        this.visibleSettingsShop = this.visibleSettingsShop.bind(this);
+
         this.changeInventoryEquipment = this.changeInventoryEquipment.bind(this);
         this.changeShopEquipment = this.changeShopEquipment.bind(this);
-        this.pageReload = this.pageReload.bind(this);
         this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
+        this.linkManufacturer = this.linkManufacturer.bind(this);
+        this.visibleSettingsEquipment = this.visibleSettingsEquipment.bind(this);
     };
 
     componentDidMount() {
@@ -40,29 +40,23 @@ export default class Equipment extends React.Component {
             })
     };
 
-    visibleSettings = event => {
-        console.log('WWWWWWW', event.nativeEvent.path[1].innerText)
-        if (this.state.nameEquipment === null) {
-            let nameEquipment = event.nativeEvent.path[0].textContent;
-            this.setState({nameEquipment: nameEquipment});
-        } else {
-            let divVisibleSettings = document.querySelectorAll(".visibleSettings")[0];
-            divVisibleSettings.classList.toggle("hiddenSetting");
-            let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[1];
-            divHiddenSetting.classList.toggle("hiddenSetting");
-            let nameEquipment = event.nativeEvent.path[0].textContent;
-            this.setState({nameEquipment: nameEquipment});
-            // =======Hide Buttons Shops
-            let divVisibleShopButton = document.querySelectorAll(".divVisibleShopButton")[0];
-            divVisibleShopButton.classList.toggle("hiddenSetting")
-            // =======
-        }
+    visibleSettingsShop = event => {
+        let clickShop = Number(event.nativeEvent.target.id);
+        this.setState({selectedShop: clickShop});
+        let shopEquipment = this.state.equipment.filter(equipments => equipments.shop === clickShop);
+        this.setState({shopEquipment: shopEquipment});
+        // ======
+        let hiddenShopList = document.querySelectorAll(".hiddenShopList")[0];
+        hiddenShopList.classList.toggle("hiddenShopList");
+        let divVisibleSettings = document.querySelectorAll(".visibleSettings")[0];
+        divVisibleSettings.classList.toggle("hiddenSetting");
+        // =======Hide Buttons Shops
+        let divVisibleShopButton = document.querySelectorAll(".divVisibleShopButton")[0];
+        divVisibleShopButton.classList.toggle("hiddenSetting")
+        // =======
     };
 
-    pageReload() {
-        document.location.reload();
-    };
-
+    // ========
     changeInventoryEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
@@ -94,20 +88,20 @@ export default class Equipment extends React.Component {
             let id = Number(event.nativeEvent.path[2].children[1].textContent);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменить номер цеха', oldValue);
-                if (newValue !== null) {
-                    let target = this.state.equipment.find((index => index.id === id));
-                    target.shop = newValue;
-                    const URLPUT = `http://localhost:3001/equipments/${target.id.toString()}`;
-                    axios.put(URLPUT, target)
-                        .then(response => {
-                            alert(`Номер Цеха изменен c ${oldValue} на ${newValue} успешно!`);
-                            this.pageReload();
-                        })
-                        .catch(e => {
-                            this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
-                            console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
-                        })
-                }
+            if (newValue !== null) {
+                let target = this.state.equipment.find((index => index.id === id));
+                target.shop = newValue;
+                const URLPUT = `http://localhost:3001/equipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Номер Цеха изменен c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
         } else {
             alert('У Вас нет прав для этого действия!');
         }
@@ -191,22 +185,61 @@ export default class Equipment extends React.Component {
         };
     };
 
-    render() {
-        if (this.state.error !== null) {
-            return (
-                <div>
-                    <h4>
-                        Error message: {this.state.error.message}
-                    </h4>
-                    <h5>
-                        Page {this.state.error.response.statusText}, Error {this.state.error.response.status}
-                    </h5>
-                </div>
-            )
+    visibleSettingsEquipment = event => {
+        console.log('wewewewew', event.nativeEvent.path[1].innerText)
+
+        if (this.state.nameEquipment === null) {
+            let nameEquipment = event.nativeEvent.path[0].textContent;
+            this.setState({nameEquipment: nameEquipment});
+        } else {
+            let divVisibleSettings = document.querySelectorAll(".visibleSettings")[2];
+            divVisibleSettings.classList.toggle("hiddenSetting");
+            let visibleShopList = document.querySelectorAll(".visibleShopList")[0];
+            visibleShopList.classList.toggle("hiddenSetting");
+            let nameEquipment = event.nativeEvent.path[0].textContent;
+            this.setState({nameEquipment: nameEquipment});
         }
+    };
+
+    backToList = event => {
+        let divHiddenSetting = document.querySelectorAll(".hiddenSetting")[0];
+        divHiddenSetting.classList.toggle("hiddenSetting");
+
+        let visibleShopList = document.querySelectorAll(".visibleShopList")[0];
+        visibleShopList.classList.toggle("hiddenShopList");
+
+        // ===== Show Buttons Shops
+        let divVisibleShopButton = document.querySelectorAll(".divVisibleShopButton")[0];
+        divVisibleShopButton.classList.toggle("hiddenSetting");
+        // ====
+    };
+    // ========
+
+    render() {
         return (
-            <div>
-                <div className="visibleSettings">
+            <div className='dropList'>
+                <div className='divVisibleShopButton'>
+                    <button type="submit" className='shop' onClick={this.visibleSettingsShop} id='1'>
+                        Оборудование Цеха №1
+                    </button>
+                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='2'>
+                        Оборудование Цеха №2
+                    </button>
+                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='3'>
+                        Оборудование Цеха №3
+                    </button>
+                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='5'>
+                        Оборудование Цеха №5
+                    </button>
+                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='9'>
+                        Оборудование Цеха №9
+                    </button>
+                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='10'>
+                        Оборудование Цеха №10
+                    </button>
+                </div>
+                <div className='visibleShopList hiddenShopList'>
+                    <p className='styleShopPage'>Оборудование цеха № {this.state.selectedShop}</p>
                     <table>
                         <thead>
                         <tr>
@@ -229,7 +262,7 @@ export default class Equipment extends React.Component {
                                 Производитель
                             </th>
                             <th>
-                                <a href='#endTable'>В конец страницы &#8595;</a>
+                                <a href='#endShopTable'>В конец страницы &#8595;</a>
                             </th>
                             <th className='id'>
                                 Id
@@ -238,12 +271,11 @@ export default class Equipment extends React.Component {
                         </thead>
                         <tbody>
                         {
-                            this.state.equipment.map((equipments, index) => {
+                            this.state.shopEquipment.map((equipments, index) => {
                                 return (
                                     <tr>
                                         <td>
-                                            <span onClick={this.changeShopEquipment}
-                                                  className='spanLink'>
+                                            <span onClick={this.changeShopEquipment} className='spanLink'>
                                                 {equipments.shop}
                                             </span>
                                         </td>
@@ -251,20 +283,18 @@ export default class Equipment extends React.Component {
                                             {index + 1}
                                         </td>
                                         <td>
-                                            <a onClick={this.visibleSettings} target='_blank'
+                                            <a onClick={this.visibleSettingsEquipment} target='_blank'
                                                rel="noopener noreferrer">
                                                 {equipments.model}
                                             </a>
                                         </td>
                                         <td>
-                                            <span onClick={this.changeInventoryEquipment}
-                                                  className='spanLink'>
+                                            <span onClick={this.changeInventoryEquipment} className='spanLink'>
                                                 {equipments.inventory}
                                             </span>
                                         </td>
                                         <td>
-                                            <span onClick={this.changeSerialEquipment}
-                                                  className='spanLink'>
+                                            <span onClick={this.changeSerialEquipment} className='spanLink'>
                                                 {equipments.serial}
                                             </span>
                                         </td>
@@ -285,19 +315,19 @@ export default class Equipment extends React.Component {
                         </tbody>
                         <tfoot>
                         <h4>
-                            <div id='endTable'>
+                            <div id='endShopTable'>
                                 Конец таблицы!
                                 <h5>
-                                    Общее колличество сварочного оборудования = {this.state.equipment.length} шт.
+                                    Общее колличество сварочного оборудования
+                                    = {this.state.shopEquipment.length} шт.
                                 </h5>
                             </div>
                         </h4>
                         </tfoot>
                     </table>
-                    <AddNewEquipment/>
+                    <button onClick={this.backToList} className="BackToList">Назад к таблице с оборудованием</button>
                 </div>
-                <EquipmentsSettings choise={this.state.nameEquipment}/>
-                <ShopEquipments />
+                <EquipmentsSettings choise={this.state.nameEquipment} selectedShop={this.state.selectedShop}/>
             </div>
         )
     }

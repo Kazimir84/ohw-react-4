@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import axios, {Axios} from "axios";
 
 const URL = 'http://localhost:3001/equipments';
 // const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json'
@@ -8,18 +8,22 @@ const URL = 'http://localhost:3001/equipments';
 const newEquipment = {
     shop: 'Данные небыли введены',
     id: 'Данные небыли введены',
+    number: 'Данные небыли введены',
     inventory: 'Данные небыли введены',
     model: 'Данные небыли введены',
     manufacturer: 'Данные небыли введены',
     serial: 'Данные небыли введены',
-}
+};
+let newEquipments = [];
 
 export default class AddNewEquipment extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            equipment: [],
             // shop: 'Данные небыли введены',
             // id: 'Данные небыли введены',
+            // number: 'Данные небыли введены',
             // inventory: 'Данные небыли введены',
             // model: 'Данные небыли введены',
             // manufacture: 'Данные небыли введены',
@@ -34,29 +38,33 @@ export default class AddNewEquipment extends React.Component {
         this.handleAddModel = this.handleAddModel.bind(this);
         this.handleAddManufacturer = this.handleAddManufacturer.bind(this);
         this.handleAddSerial = this.handleAddSerial.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-
 
     handleAddShop = event => {
         newEquipment.shop = Number(event.target.value);
-    }
+    };
+
     handleAddId = event => {
         let id = event.nativeEvent.path[3].children[0].children[1].children.length + 1;
         newEquipment.id = Number(id);
-    }
+    };
+
     handleAddModel = event => {
         newEquipment.model = event.target.value;
-    }
+    };
+
     handleAddInventory = event => {
         newEquipment.inventory = event.target.value;
-    }
+    };
+
     handleAddSerial = event => {
         newEquipment.serial = event.target.value;
-    }
+    };
+
     handleAddManufacturer = event => {
         newEquipment.manufacturer = event.target.value;
-    }
+    };
 
     handleSubmit = event => {
         event.preventDefault();
@@ -71,12 +79,11 @@ export default class AddNewEquipment extends React.Component {
             this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack})
             console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack)
         })
-
-    }
+    };
 
     pageReload() {
         document.location.reload();
-    }
+    };
 
     render() {
         if (this.state.error !== null) {
@@ -104,5 +111,5 @@ export default class AddNewEquipment extends React.Component {
                 </form>
             </div>
         )
-    }
-}
+    };
+};
