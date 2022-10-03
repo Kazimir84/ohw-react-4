@@ -13,8 +13,9 @@ const newEquipment = {
     model: 'Данные небыли введены',
     manufacturer: 'Данные небыли введены',
     serial: 'Данные небыли введены',
+    date: 'Данные небыли введены',
 };
-let newEquipments = [];
+// let newEquipments = [];
 
 export default class AddNewEquipment extends React.Component {
     constructor(props) {
@@ -48,6 +49,21 @@ export default class AddNewEquipment extends React.Component {
     handleAddId = event => {
         let id = event.nativeEvent.path[3].children[0].children[1].children.length + 1;
         newEquipment.id = Number(id);
+        //===== Дата добавления аппарата
+        let date = new Date();
+        let options = {
+            era: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long',
+            timezone: 'UTC',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric'
+        };
+        newEquipment.date = date.toLocaleString("ua", options);
+        //=====
     };
 
     handleAddModel = event => {
@@ -99,7 +115,10 @@ export default class AddNewEquipment extends React.Component {
         }
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className='formAddNewEquipment'>
+                    <h4 className='form_h4_AddNewEquipment'>
+                        Добавление нового оборудования
+                    </h4>
                     <label>
                         <input name="shop" type="text" onChange={this.handleAddShop} placeholder="Номер Цеха"/>
                         <input name="model" type="text" onChange={this.handleAddModel} placeholder="Модель апарата"/>

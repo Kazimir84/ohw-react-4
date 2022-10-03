@@ -26,6 +26,7 @@ export default class ShopEquipments extends React.Component {
         this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
         this.linkManufacturer = this.linkManufacturer.bind(this);
         this.visibleSettingsEquipment = this.visibleSettingsEquipment.bind(this);
+        this.data = this.data.bind(this);
     };
 
     componentDidMount() {
@@ -214,6 +215,17 @@ export default class ShopEquipments extends React.Component {
         // ====
     };
     // ========
+    data = event => {
+        let thisDate = new Date();
+        let options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long',
+            timezone: 'UTC',
+        };
+        return  thisDate.toLocaleString("ua", options);
+    };
 
     render() {
         return (
@@ -237,6 +249,7 @@ export default class ShopEquipments extends React.Component {
                     <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='10'>
                         Оборудование Цеха №10
                     </button>
+                    <div>Сегодня -> {this.data()}</div>
                 </div>
                 <div className='visibleShopList hiddenShopList'>
                     <p className='styleShopPage'>Оборудование цеха № {this.state.selectedShop}</p>
@@ -275,7 +288,9 @@ export default class ShopEquipments extends React.Component {
                                 return (
                                     <tr>
                                         <td>
-                                            <span onClick={this.changeShopEquipment} className='spanLink'>
+                                            <span onClick={this.changeShopEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить номер Цеха'>
                                                 {equipments.shop}
                                             </span>
                                         </td>
@@ -283,24 +298,31 @@ export default class ShopEquipments extends React.Component {
                                             {index + 1}
                                         </td>
                                         <td>
-                                            <a onClick={this.visibleSettingsEquipment} target='_blank'
-                                               rel="noopener noreferrer">
+                                            <a onClick={this.visibleSettingsEquipment}
+                                               target='_blank'
+                                               rel="noopener noreferrer"
+                                               title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
                                                 {equipments.model}
                                             </a>
                                         </td>
                                         <td>
-                                            <span onClick={this.changeInventoryEquipment} className='spanLink'>
+                                            <span onClick={this.changeInventoryEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Инвентарный номер'>
                                                 {equipments.inventory}
                                             </span>
                                         </td>
                                         <td>
-                                            <span onClick={this.changeSerialEquipment} className='spanLink'>
+                                            <span onClick={this.changeSerialEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Серийный номер'>
                                                 {equipments.serial}
                                             </span>
                                         </td>
                                         <td>
                                             <a onClick={this.linkManufacturer}
-                                               href={this.state.linkManufacturer}>
+                                               href={this.state.linkManufacturer}
+                                               title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
                                                 {equipments.manufacturer}
                                             </a>
                                         </td>
@@ -314,6 +336,18 @@ export default class ShopEquipments extends React.Component {
                         }
                         </tbody>
                         <tfoot>
+                        {/*<h4>*/}
+                        {/*    <div id='endShopTable'>*/}
+                        {/*        Конец таблицы!*/}
+                        {/*        <h5>*/}
+                        {/*            Общее колличество сварочного оборудования*/}
+                        {/*            = {this.state.shopEquipment.length} шт.*/}
+                        {/*        </h5>*/}
+                        {/*    </div>*/}
+                        {/*</h4>*/}
+                        </tfoot>
+                    </table>
+                    <div>
                         <h4>
                             <div id='endShopTable'>
                                 Конец таблицы!
@@ -323,8 +357,7 @@ export default class ShopEquipments extends React.Component {
                                 </h5>
                             </div>
                         </h4>
-                        </tfoot>
-                    </table>
+                    </div>
                     <button onClick={this.backToList} className="BackToList">Назад к таблице с оборудованием</button>
                 </div>
                 <EquipmentsSettings choise={this.state.nameEquipment} selectedShop={this.state.selectedShop}/>

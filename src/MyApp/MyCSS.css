@@ -125,3 +125,15 @@ img {
     margin: 10px;
     font-family: serif;
 }
+.formAddNewEquipment {
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px;
+    padding: 20px 0px 0px 0px;
+    border-radius: 20px;
+}
+
+.form_h4_AddNewEquipment {
+    margin: -10px 0px 20px 0px;
+    color: chartreuse;
+}

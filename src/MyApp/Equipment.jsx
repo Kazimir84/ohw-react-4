@@ -41,7 +41,6 @@ export default class Equipment extends React.Component {
     };
 
     visibleSettings = event => {
-        console.log('WWWWWWW', event.nativeEvent.path[1].innerText)
         if (this.state.nameEquipment === null) {
             let nameEquipment = event.nativeEvent.path[0].textContent;
             this.setState({nameEquipment: nameEquipment});
@@ -243,34 +242,40 @@ export default class Equipment extends React.Component {
                                     <tr>
                                         <td>
                                             <span onClick={this.changeShopEquipment}
-                                                  className='spanLink'>
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить номер Цеха'>
                                                 {equipments.shop}
                                             </span>
                                         </td>
-                                        <td>
+                                        <td title={'Порядковый номер'}>
                                             {index + 1}
                                         </td>
                                         <td>
-                                            <a onClick={this.visibleSettings} target='_blank'
-                                               rel="noopener noreferrer">
+                                            <a onClick={this.visibleSettings}
+                                               target='_blank'
+                                               rel="noopener noreferrer"
+                                               title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
                                                 {equipments.model}
                                             </a>
                                         </td>
                                         <td>
                                             <span onClick={this.changeInventoryEquipment}
-                                                  className='spanLink'>
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Инвентарный номер'>
                                                 {equipments.inventory}
                                             </span>
                                         </td>
                                         <td>
                                             <span onClick={this.changeSerialEquipment}
-                                                  className='spanLink'>
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Серийный номер'>
                                                 {equipments.serial}
                                             </span>
                                         </td>
                                         <td>
                                             <a onClick={this.linkManufacturer}
-                                               href={this.state.linkManufacturer}>
+                                               href={this.state.linkManufacturer}
+                                               title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
                                                 {equipments.manufacturer}
                                             </a>
                                         </td>
@@ -284,6 +289,17 @@ export default class Equipment extends React.Component {
                         }
                         </tbody>
                         <tfoot>
+                        {/*<h4>*/}
+                        {/*    <div id='endTable'>*/}
+                        {/*        Конец таблицы!*/}
+                        {/*        <h5>*/}
+                        {/*            Общее колличество сварочного оборудования = {this.state.equipment.length} шт.*/}
+                        {/*        </h5>*/}
+                        {/*    </div>*/}
+                        {/*</h4>*/}
+                        </tfoot>
+                    </table>
+                    <div>
                         <h4>
                             <div id='endTable'>
                                 Конец таблицы!
@@ -292,8 +308,7 @@ export default class Equipment extends React.Component {
                                 </h5>
                             </div>
                         </h4>
-                        </tfoot>
-                    </table>
+                    </div>
                     <AddNewEquipment/>
                 </div>
                 <EquipmentsSettings choise={this.state.nameEquipment}/>

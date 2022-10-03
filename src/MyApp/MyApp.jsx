@@ -11,6 +11,9 @@ export default class MyApp extends React.Component {
     render() {
         return (
             <div>
+                <h1>
+                    Сварочное оборудование компании ALTEP
+                </h1>
                 <div>
                     <Equipment />
                 </div>

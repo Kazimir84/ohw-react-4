@@ -1,9 +1,8 @@
 {
   "equipments": [
     {
-      "shop": 1,
+      "shop": "1",
       "id": 1,
-      "number": 1,
       "serial": "----",
       "inventory": "Н0029",
       "model": "ПСТ-251",
@@ -12,7 +11,6 @@
     {
       "shop": 1,
       "id": 2,
-      "number": 2,
       "serial": "----",
       "inventory": "А0028",
       "model": "ПСТ-251",
@@ -21,7 +19,6 @@
     {
       "shop": 1,
       "id": 3,
-      "number": 3,
       "serial": "----",
       "inventory": "Н0069",
       "model": "ПСТ-251",
@@ -30,7 +27,6 @@
     {
       "shop": 1,
       "id": 4,
-      "number": 4,
       "serial": "----",
       "inventory": "А53",
       "model": "ПСТ-251",
@@ -39,7 +35,6 @@
     {
       "shop": 1,
       "id": 5,
-      "number": 5,
       "inventory": "A302",
       "model": "Origio MIG C340 Pro",
       "serial": "----",
@@ -48,7 +43,6 @@
     {
       "shop": 1,
       "id": 6,
-      "number": 6,
       "inventory": "A301",
       "model": "Origio MIG C340 Pro",
       "serial": "----",
@@ -57,7 +51,6 @@
     {
       "shop": 1,
       "id": 7,
-      "number": 7,
       "inventory": "A271",
       "model": "Origio MIG C340 Pro",
       "serial": "----",
@@ -66,7 +59,6 @@
     {
       "shop": 1,
       "id": 8,
-      "number": 8,
       "inventory": "Н0062",
       "model": "Машина плазменной резки ЧПУ Radian-1500",
       "manufacturer": "Radian",
@@ -75,7 +67,6 @@
     {
       "shop": 1,
       "id": 9,
-      "number": 9,
       "inventory": "Н065",
       "model": "Машина плазменной резки ЧПУ Radian-1500",
       "manufacturer": "Radian",
@@ -84,7 +75,6 @@
     {
       "shop": 1,
       "id": 10,
-      "number": 10,
       "inventory": "А0132",
       "model": "Машина плазменной резки ЧПУ Radian-2000",
       "manufacturer": "Radian",
@@ -93,7 +83,6 @@
     {
       "shop": 2,
       "id": 11,
-      "number": 11,
       "inventory": "Ф198",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -102,7 +91,6 @@
     {
       "shop": 2,
       "id": 12,
-      "number": 12,
       "inventory": "A267",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -111,7 +99,6 @@
     {
       "shop": 2,
       "id": 13,
-      "number": 13,
       "inventory": "H0030",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -120,7 +107,6 @@
     {
       "shop": 2,
       "id": 14,
-      "number": 14,
       "inventory": "H0031",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -129,7 +115,6 @@
     {
       "shop": 2,
       "id": 15,
-      "number": 15,
       "inventory": "Ф021",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -138,7 +123,6 @@
     {
       "shop": 2,
       "id": 16,
-      "number": 16,
       "inventory": "Н-216",
       "model": "JASIC MIG 500",
       "manufacturer": "JASIC",
@@ -147,7 +131,6 @@
     {
       "shop": 2,
       "id": 17,
-      "number": 17,
       "inventory": "Н-217",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -156,7 +139,6 @@
     {
       "shop": 2,
       "id": 18,
-      "number": 18,
       "inventory": "A376",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -165,7 +147,6 @@
     {
       "shop": 2,
       "id": 19,
-      "number": 19,
       "inventory": "A270",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -174,7 +155,6 @@
     {
       "shop": 2,
       "id": 20,
-      "number": 20,
       "inventory": "A-299",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -183,7 +163,6 @@
     {
       "shop": 2,
       "id": 21,
-      "number": 21,
       "inventory": "Ф060 (15060)",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -192,7 +171,6 @@
     {
       "shop": 2,
       "id": 22,
-      "number": 22,
       "inventory": "A234",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -201,7 +179,6 @@
     {
       "shop": 2,
       "id": 23,
-      "number": 23,
       "inventory": "А618",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -210,7 +187,6 @@
     {
       "shop": 2,
       "id": 24,
-      "number": 24,
       "inventory": "А619",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -219,7 +195,6 @@
     {
       "shop": 2,
       "id": 25,
-      "number": 25,
       "inventory": "А0017",
       "model": "ВД-306",
       "manufacturer": "----",
@@ -228,7 +203,6 @@
     {
       "shop": 2,
       "id": 26,
-      "number": 26,
       "inventory": "МЦ290",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -237,7 +211,6 @@
     {
       "shop": 2,
       "id": 27,
-      "number": 27,
       "inventory": "МЦ289",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -246,7 +219,6 @@
     {
       "shop": 2,
       "id": 28,
-      "number": 28,
       "inventory": "МЦ291",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -255,7 +227,6 @@
     {
       "shop": 2,
       "id": 29,
-      "number": 29,
       "inventory": "----",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -264,7 +235,6 @@
     {
       "shop": 2,
       "id": 30,
-      "number": 30,
       "inventory": "Ф0116",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -273,7 +243,6 @@
     {
       "shop": 2,
       "id": 31,
-      "number": 31,
       "inventory": "Ф091",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -282,7 +251,6 @@
     {
       "shop": 2,
       "id": 32,
-      "number": 32,
       "inventory": "Н0015 (не рабоч)",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -291,7 +259,6 @@
     {
       "shop": 2,
       "id": 33,
-      "number": 33,
       "inventory": "Н0030 (не рабоч)",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -300,7 +267,6 @@
     {
       "shop": 2,
       "id": 34,
-      "number": 34,
       "inventory": "А17  (не рабоч)",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -309,7 +275,6 @@
     {
       "shop": 2,
       "id": 35,
-      "number": 35,
       "inventory": "Н0015",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -318,7 +283,6 @@
     {
       "shop": 2,
       "id": 36,
-      "number": 36,
       "inventory": "А264",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -327,7 +291,6 @@
     {
       "shop": 2,
       "id": 37,
-      "number": 37,
       "inventory": "А265",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -336,7 +299,6 @@
     {
       "shop": 2,
       "id": 38,
-      "number": 38,
       "inventory": "А266",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -345,7 +307,6 @@
     {
       "shop": 2,
       "id": 39,
-      "number": 39,
       "inventory": "Н0191",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -354,7 +315,6 @@
     {
       "shop": 2,
       "id": 40,
-      "number": 40,
       "inventory": "А298",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -363,7 +323,6 @@
     {
       "shop": 2,
       "id": 41,
-      "number": 41,
       "inventory": "А297",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -372,7 +331,6 @@
     {
       "shop": 2,
       "id": 42,
-      "number": 42,
       "inventory": "А296",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -381,7 +339,6 @@
     {
       "shop": 2,
       "id": 43,
-      "number": 43,
       "inventory": "А295",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -390,7 +347,6 @@
     {
       "shop": 2,
       "id": 44,
-      "number": 44,
       "inventory": "А291",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -399,7 +355,6 @@
     {
       "shop": 2,
       "id": 45,
-      "number": 45,
       "inventory": "А272",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -408,7 +363,6 @@
     {
       "shop": 2,
       "id": 46,
-      "number": 46,
       "inventory": "Н0067",
       "model": "ПСТ-161",
       "manufacturer": "Темп-С",
@@ -417,16 +371,14 @@
     {
       "shop": 2,
       "id": 47,
-      "number": 47,
       "inventory": "Н0010",
       "model": "Аппарат Плазменной Резки GACKL 33H",
       "manufacturer": "Jaeckle",
       "serial": "----"
     },
     {
-      "shop": 3,
+      "shop": "3",
       "id": 48,
-      "number": 48,
       "inventory": "A489",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -435,7 +387,6 @@
     {
       "shop": 3,
       "id": 49,
-      "number": 49,
       "inventory": "А488",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -444,7 +395,6 @@
     {
       "shop": 3,
       "id": 50,
-      "number": 50,
       "inventory": "А490",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -453,7 +403,6 @@
     {
       "shop": 3,
       "id": 51,
-      "number": 51,
       "inventory": "A0002",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -462,7 +411,6 @@
     {
       "shop": 3,
       "id": 52,
-      "number": 52,
       "inventory": "H0101",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -471,7 +419,6 @@
     {
       "shop": 3,
       "id": 53,
-      "number": 53,
       "inventory": "A0190",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -480,7 +427,6 @@
     {
       "shop": 3,
       "id": 54,
-      "number": 54,
       "inventory": "----",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -489,7 +435,6 @@
     {
       "shop": 3,
       "id": 55,
-      "number": 55,
       "inventory": "A0004",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -498,7 +443,6 @@
     {
       "shop": 3,
       "id": 56,
-      "number": 56,
       "inventory": "A0191",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -507,7 +451,6 @@
     {
       "shop": 3,
       "id": 57,
-      "number": 57,
       "inventory": "----",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -516,7 +459,6 @@
     {
       "shop": 3,
       "id": 58,
-      "number": 58,
       "inventory": "----",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -525,7 +467,6 @@
     {
       "shop": 3,
       "id": 59,
-      "number": 59,
       "inventory": "A245",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -534,7 +475,6 @@
     {
       "shop": 3,
       "id": 60,
-      "number": 60,
       "inventory": "A0005",
       "model": "ENERGY ПДГ-315",
       "manufacturer": "ЭНЕРГИЯ",
@@ -543,7 +483,6 @@
     {
       "shop": 3,
       "id": 61,
-      "number": 61,
       "inventory": "----",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -552,7 +491,6 @@
     {
       "shop": 3,
       "id": 62,
-      "number": 62,
       "inventory": "A0001",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -561,7 +499,6 @@
     {
       "shop": 3,
       "id": 63,
-      "number": 63,
       "inventory": "A0003",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -570,7 +507,6 @@
     {
       "shop": 3,
       "id": 64,
-      "number": 64,
       "inventory": "----",
       "model": "JASIC MIG 500",
       "manufacturer": "JASIC",
@@ -579,7 +515,6 @@
     {
       "shop": 3,
       "id": 65,
-      "number": 65,
       "inventory": "A244",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -588,7 +523,6 @@
     {
       "shop": 3,
       "id": 66,
-      "number": 66,
       "inventory": "Ф67",
       "model": "JASIC MIG 315F",
       "manufacturer": "JASIC",
@@ -597,7 +531,6 @@
     {
       "shop": 3,
       "id": 67,
-      "number": 67,
       "inventory": "----",
       "model": "JASIC MIG 315F",
       "manufacturer": "JASIC",
@@ -606,7 +539,6 @@
     {
       "shop": 3,
       "id": 68,
-      "number": 68,
       "inventory": "А0189",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -615,7 +547,6 @@
     {
       "shop": 3,
       "id": 69,
-      "number": 69,
       "inventory": "----",
       "model": "Энергия ПДГУ-350",
       "manufacturer": "ЭНЕРГИЯ",
@@ -624,7 +555,6 @@
     {
       "shop": 3,
       "id": 70,
-      "number": 70,
       "inventory": "А0061",
       "model": "ПСТ-161",
       "manufacturer": "Темп-С",
@@ -633,7 +563,6 @@
     {
       "shop": 3,
       "id": 71,
-      "number": 71,
       "inventory": "Н0196",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -642,7 +571,6 @@
     {
       "shop": 3,
       "id": 72,
-      "number": 72,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -651,7 +579,6 @@
     {
       "shop": 5,
       "id": 73,
-      "number": 73,
       "inventory": "Н-61",
       "model": "ПСТ-161",
       "manufacturer": "Темп-С",
@@ -660,7 +587,6 @@
     {
       "shop": 5,
       "id": 74,
-      "number": 74,
       "inventory": "A-453 A-480",
       "model": "Digi TIG 320P Блок охолодження WC 10",
       "manufacturer": "Welding Dragon",
@@ -669,7 +595,6 @@
     {
       "shop": 5,
       "id": 75,
-      "number": 75,
       "inventory": "А-162 А-163",
       "model": "JASIC TIG 315P TIG 315Р Блок охолодження WCN 370B",
       "manufacturer": "JASIC",
@@ -678,7 +603,6 @@
     {
       "shop": 5,
       "id": 76,
-      "number": 76,
       "inventory": "А-573",
       "model": "DEX PM3000",
       "manufacturer": "MEGMEET",
@@ -687,7 +611,6 @@
     {
       "shop": 5,
       "id": 77,
-      "number": 77,
       "inventory": "----",
       "model": "SSVA 180-Р",
       "manufacturer": "SSVA",
@@ -696,7 +619,6 @@
     {
       "shop": 5,
       "id": 78,
-      "number": 78,
       "inventory": "----",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -705,7 +627,6 @@
     {
       "shop": 5,
       "id": 79,
-      "number": 79,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -714,16 +635,14 @@
     {
       "shop": 5,
       "id": 80,
-      "number": 80,
       "inventory": "А236",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4082"
     },
     {
       "shop": 5,
       "id": 81,
-      "number": 81,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -732,43 +651,38 @@
     {
       "shop": 5,
       "id": 82,
-      "number": 82,
       "inventory": "A300",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-849-8198"
     },
     {
       "shop": 5,
       "id": 83,
-      "number": 83,
       "inventory": "----",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-732-6460"
     },
     {
       "shop": 5,
       "id": 84,
-      "number": 84,
       "inventory": "A269",
-      "model": "",
-      "manufacturer": "ESABOrigio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
+      "manufacturer": "ESAB",
       "serial": "627-551-4099"
     },
     {
       "shop": 5,
       "id": 85,
-      "number": 85,
       "inventory": "----",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-050-0571"
     },
     {
       "shop": 5,
       "id": 86,
-      "number": 86,
       "inventory": "A17",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -777,7 +691,6 @@
     {
       "shop": 5,
       "id": 87,
-      "number": 87,
       "inventory": "А0103 А0108 А0105 А0107",
       "model": "ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus",
       "manufacturer": "ESAB",
@@ -786,7 +699,6 @@
     {
       "shop": 5,
       "id": 88,
-      "number": 88,
       "inventory": "А5083 Н0103 Н108 Н0105 Н0107",
       "model": "ESAB Aristo Mig Pulse ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus",
       "manufacturer": "ESAB",
@@ -795,7 +707,6 @@
     {
       "shop": 5,
       "id": 89,
-      "number": 89,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -804,25 +715,22 @@
     {
       "shop": 5,
       "id": 90,
-      "number": 90,
       "inventory": "----",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4083"
     },
     {
       "shop": 5,
       "id": 91,
-      "number": 91,
       "inventory": "А233",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "----"
     },
     {
       "shop": 5,
       "id": 92,
-      "number": 92,
       "inventory": "----",
       "model": "JASIC MIG 400",
       "manufacturer": "JASIC",
@@ -831,7 +739,6 @@
     {
       "shop": 5,
       "id": 93,
-      "number": 93,
       "inventory": "----",
       "model": "JASIC MIG 400",
       "manufacturer": "JASIC",
@@ -840,7 +747,6 @@
     {
       "shop": 5,
       "id": 94,
-      "number": 94,
       "inventory": "А0094",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -849,7 +755,6 @@
     {
       "shop": 5,
       "id": 95,
-      "number": 95,
       "inventory": "----",
       "model": "Аппарат Плазменной Резки GACKL 33H",
       "manufacturer": "Jaeckle",
@@ -858,7 +763,6 @@
     {
       "shop": 5,
       "id": 96,
-      "number": 96,
       "inventory": "А454",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -867,7 +771,6 @@
     {
       "shop": 5,
       "id": 97,
-      "number": 97,
       "inventory": "----",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -876,7 +779,6 @@
     {
       "shop": 5,
       "id": 98,
-      "number": 98,
       "inventory": "А232",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -885,7 +787,6 @@
     {
       "shop": 5,
       "id": 99,
-      "number": 99,
       "inventory": "А235",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -894,7 +795,6 @@
     {
       "shop": 5,
       "id": 100,
-      "number": 100,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -903,7 +803,6 @@
     {
       "shop": 5,
       "id": 101,
-      "number": 101,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -912,7 +811,6 @@
     {
       "shop": 5,
       "id": 102,
-      "number": 102,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -921,7 +819,6 @@
     {
       "shop": 5,
       "id": 103,
-      "number": 103,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -930,7 +827,6 @@
     {
       "shop": 5,
       "id": 104,
-      "number": 104,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -939,34 +835,30 @@
     {
       "shop": 5,
       "id": 105,
-      "number": 105,
       "inventory": "А231",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-550-4088"
     },
     {
       "shop": 9,
       "id": 106,
-      "number": 106,
       "inventory": "А-323",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-049-0521"
     },
     {
       "shop": 9,
       "id": 107,
-      "number": 107,
       "inventory": " А5 022",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "677-551-4102"
     },
     {
       "shop": 9,
       "id": 108,
-      "number": 108,
       "inventory": "А0129",
       "model": "ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus",
       "manufacturer": "ESAB",
@@ -975,16 +867,14 @@
     {
       "shop": 9,
       "id": 109,
-      "number": 109,
       "inventory": "А279",
-      "model": "Origio MIG C340 Pro",
+      "model": "Origio Mig C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-831-7758"
     },
     {
       "shop": 9,
       "id": 110,
-      "number": 110,
       "inventory": "Н0187",
       "model": "Энергия ПДГУ-500",
       "manufacturer": "ЭНЕРГИЯ",
@@ -993,7 +883,6 @@
     {
       "shop": 9,
       "id": 111,
-      "number": 111,
       "inventory": "Н0188",
       "model": "Энергия ПДГУ-500",
       "manufacturer": "ЭНЕРГИЯ",
@@ -1002,7 +891,6 @@
     {
       "shop": 9,
       "id": 112,
-      "number": 112,
       "inventory": "У2 001",
       "model": "JASIC MIG 315F",
       "manufacturer": "JASIC",
@@ -1011,7 +899,6 @@
     {
       "shop": 9,
       "id": 113,
-      "number": 113,
       "inventory": " А5 023",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -1020,7 +907,6 @@
     {
       "shop": 9,
       "id": 114,
-      "number": 114,
       "inventory": "А-292",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -1029,7 +915,6 @@
     {
       "shop": 9,
       "id": 115,
-      "number": 115,
       "inventory": "Ф203",
       "model": "БУРАН ПДГ-315",
       "manufacturer": "ЭНЕРГИЯ",
@@ -1038,7 +923,6 @@
     {
       "shop": 9,
       "id": 116,
-      "number": 116,
       "inventory": "А440",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -1047,7 +931,6 @@
     {
       "shop": 9,
       "id": 117,
-      "number": 117,
       "inventory": "Ф45",
       "model": "БУРАН ПДГ-315",
       "manufacturer": "ЭНЕРГИЯ",
@@ -1056,7 +939,6 @@
     {
       "shop": 9,
       "id": 118,
-      "number": 118,
       "inventory": "----",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -1065,7 +947,6 @@
     {
       "shop": 9,
       "id": 119,
-      "number": 119,
       "inventory": "A338",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -1074,7 +955,6 @@
     {
       "shop": 9,
       "id": 120,
-      "number": 120,
       "inventory": "Н0186",
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
@@ -1083,7 +963,6 @@
     {
       "shop": 10,
       "id": 121,
-      "number": 121,
       "inventory": "А637",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -1092,7 +971,6 @@
     {
       "shop": 10,
       "id": 122,
-      "number": 122,
       "inventory": "А638",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -1101,7 +979,6 @@
     {
       "shop": 10,
       "id": 123,
-      "number": 123,
       "inventory": "----",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -1110,7 +987,6 @@
     {
       "shop": 10,
       "id": 124,
-      "number": 124,
       "inventory": "----",
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
@@ -1119,7 +995,6 @@
     {
       "shop": 10,
       "id": 125,
-      "number": 125,
       "inventory": "Н224",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1128,7 +1003,6 @@
     {
       "shop": 10,
       "id": 126,
-      "number": 126,
       "inventory": "Н225",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1137,7 +1011,6 @@
     {
       "shop": 10,
       "id": 127,
-      "number": 127,
       "inventory": "Н226",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1146,7 +1019,6 @@
     {
       "shop": 10,
       "id": 128,
-      "number": 128,
       "inventory": "Н227",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1155,7 +1027,6 @@
     {
       "shop": 10,
       "id": 129,
-      "number": 129,
       "inventory": "Н228",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1164,7 +1035,6 @@
     {
       "shop": 10,
       "id": 130,
-      "number": 130,
       "inventory": "Н229",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1173,7 +1043,6 @@
     {
       "shop": 10,
       "id": 131,
-      "number": 131,
       "inventory": "----",
       "model": "MEGMEET Ehave CM350",
       "manufacturer": "MEGMEET",
@@ -1182,7 +1051,6 @@
     {
       "shop": 10,
       "id": 132,
-      "number": 132,
       "inventory": "А575",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -1191,7 +1059,6 @@
     {
       "shop": 10,
       "id": 133,
-      "number": 133,
       "inventory": "А576",
       "model": "MEGMEET Ehave CM500",
       "manufacturer": "MEGMEET",
@@ -1200,7 +1067,6 @@
     {
       "shop": 10,
       "id": 134,
-      "number": 134,
       "inventory": "----",
       "model": "CUT-60",
       "manufacturer": "TESLA",
@@ -1209,7 +1075,6 @@
     {
       "shop": 10,
       "id": 135,
-      "number": 135,
       "inventory": "Н 10027",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -1218,7 +1083,6 @@
     {
       "shop": 10,
       "id": 136,
-      "number": 136,
       "inventory": "Ф-290",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -1227,7 +1091,6 @@
     {
       "shop": 10,
       "id": 137,
-      "number": 137,
       "inventory": "Ф-077",
       "model": "ПСТ-251",
       "manufacturer": "Темп-С",
@@ -1236,7 +1099,6 @@
     {
       "shop": 10,
       "id": 138,
-      "number": 138,
       "inventory": "Ф297",
       "model": "Робот для сварки  Panasonic Robot Controller  TA 1400 WG ||| E YA-1WAR61E00  (OM1303030E)",
       "manufacturer": "PANASONIC",
@@ -1245,20 +1107,32 @@
     {
       "shop": 10,
       "id": 139,
-      "number": 139,
       "inventory": "Ф298",
       "model": "Робот для сварки  Panasonic Robot Controller  TA 1400 WG ||| E YA-1WAR61E00  (OM1303030E)",
       "manufacturer": "PANASONIC",
       "serial": "----"
-    },
-    {
-      "shop": 10,
-      "id": 140,
-      "number": "Данные небыли введены",
-      "inventory": "Данные небыли введены",
-      "model": "MEGMEET Artsen CM500",
-      "manufacturer": "MEGMEET",
-      "serial": "Данные небыли введены"
     }
-  ]
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "options": [
+    {
+      "model": "ПСТ-251",
+      "characteristics": "ехнические характеристики.\nПитающая сеть - трехфазная 380В 50Гц;\nПотребляемая мощность, кВА, не более - 16,5;\nМаксимальный сварочный ток при ПВ 20, А - 250;\nДопустимый сварочный ток при ПВ 100 , А - 150;\nПорог срабатывания защиты от перегрузки по току, А - 300;\nНапряжение холостого хода, не более, В - 40;\nДиаметр электродной проволоки, мм - 0,8...1,2;\nДиапазон регулирования скорости подачи электродной проволоки, м/мин - 2…16;\nВместимость катушки для электродной проволоки, кг, не менее - 6;\nМаксимальное расстояние между сварочным выпрямителем и узлом подачи электродной проволоки, м - 5;\nГабаритные размеры, мм, не более:\nсварочного выпрямителя - 500х800х600;\nузла подачи электродной проволоки - 250х220х400;\nМасса, кг, не более:\nсварочного выпрямителя - 100;\nузла подачи электродной проволоки - 15;"
+    }
+  ],
+  "PST-251": [
+    {
+      "model": "ПСТ-251",
+      "characteristics": "ехнические характеристики.\nПитающая сеть - трехфазная 380В 50Гц;\nПотребляемая мощность, кВА, не более - 16,5;\nМаксимальный сварочный ток при ПВ 20, А - 250;\nДопустимый сварочный ток при ПВ 100 , А - 150;\nПорог срабатывания защиты от перегрузки по току, А - 300;\nНапряжение холостого хода, не более, В - 40;\nДиаметр электродной проволоки, мм - 0,8...1,2;\nДиапазон регулирования скорости подачи электродной проволоки, м/мин - 2…16;\nВместимость катушки для электродной проволоки, кг, не менее - 6;\nМаксимальное расстояние между сварочным выпрямителем и узлом подачи электродной проволоки, м - 5;\nГабаритные размеры, мм, не более:\nсварочного выпрямителя - 500х800х600;\nузла подачи электродной проволоки - 250х220х400;\nМасса, кг, не более:\nсварочного выпрямителя - 100;\nузла подачи электродной проволоки - 15;"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
