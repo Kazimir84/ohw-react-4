@@ -4,6 +4,8 @@ import AddNewEquipment from "./AddNewEquipment";
 import RemoveEquipment from "./RemoveEquipment";
 import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 import ShopEquipments from "./ShopEquioments";
+import SendEquipmentUnderRepair from "./SendEquipmentUnderRepair";
+import EquipmentUnderRepair from "./EquipmentUnderRepair";
 
 
 const PASSWORD = 'admin';
@@ -29,15 +31,35 @@ export default class Equipment extends React.Component {
     };
 
     componentDidMount() {
-        axios.get(URL)
-            .then(response => {
-                response.data.sort((a,b) => a.shop - b.shop);
-                this.setState({equipment: response.data});
-            })
-            .catch(error => {
-                this.setState({error: error})
-                console.log('Error', error.code)
-            })
+            axios.get(URL)
+                .then(response => {
+                    response.data.sort((a, b) => a.shop - b.shop);
+                    this.setState({equipment: response.data});
+
+                })
+                .catch(error => {
+                    this.setState({error: error})
+                    console.log('Error', error.code)
+                })
+        // =====
+        // fetch(URL)
+        //     .then(res => res.json())
+        //     .then(
+        //         (result) => {
+        //             console.log('dddd', result)
+        //             this.setState({
+        //                 equipment: result
+        //             });
+        //         },
+        //         // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
+        //         // чтобы не перехватывать исключения из ошибок в самих компонентах.
+        //         (error) => {
+        //             this.setState({
+        //                 error
+        //             });
+        //         }
+        //     )
+        // ====
     };
 
     visibleSettings = event => {
@@ -190,6 +212,20 @@ export default class Equipment extends React.Component {
         };
     };
 
+//======================
+//     sendEquipmentUnderRepair (event) {
+//
+//         console.log('ffff', Number(event.nativeEvent.path[3].cells[8].innerText))
+//
+//             let selectedTd = event.nativeEvent.path[3];
+//             let selectedButton = event.nativeEvent.path[0];
+//             selectedTd.classList.toggle('inRepair');
+//             selectedButton.setAttribute('disabled', 'disabled');
+//             selectedButton.innerHTML = 'На данный момент аппарат находиться в ремонте!';
+//             selectedButton.classList.toggle('disabledButtonText');
+//     };
+//==================
+
     render() {
         if (this.state.error !== null) {
             return (
@@ -230,6 +266,9 @@ export default class Equipment extends React.Component {
                             <th>
                                 <a href='#endTable'>В конец страницы &#8595;</a>
                             </th>
+                            <th>
+                                Ремонт аппарата
+                            </th>
                             <th className='id'>
                                 Id
                             </th>
@@ -238,53 +277,110 @@ export default class Equipment extends React.Component {
                         <tbody>
                         {
                             this.state.equipment.map((equipments, index) => {
-                                return (
-                                    <tr>
-                                        <td>
+                                if(equipments.repair === false) {
+                                    return (
+                                        <tr>
+                                            <td>
                                             <span onClick={this.changeShopEquipment}
                                                   className='spanLink'
                                                   title='Кликни что бы изменить номер Цеха'>
                                                 {equipments.shop}
                                             </span>
-                                        </td>
-                                        <td title={'Порядковый номер'}>
-                                            {index + 1}
-                                        </td>
-                                        <td>
-                                            <a onClick={this.visibleSettings}
-                                               target='_blank'
-                                               rel="noopener noreferrer"
-                                               title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
-                                                {equipments.model}
-                                            </a>
-                                        </td>
-                                        <td>
+                                            </td>
+                                            <td title={'Порядковый номер'}>
+                                                {index + 1}
+                                            </td>
+                                            <td>
+                                                <a onClick={this.visibleSettings}
+                                                   target='_blank'
+                                                   rel="noopener noreferrer"
+                                                   title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
+                                                    {equipments.model}
+                                                </a>
+                                            </td>
+                                            <td>
                                             <span onClick={this.changeInventoryEquipment}
                                                   className='spanLink'
                                                   title='Кликни что бы изменить Инвентарный номер'>
                                                 {equipments.inventory}
                                             </span>
-                                        </td>
-                                        <td>
+                                            </td>
+                                            <td>
                                             <span onClick={this.changeSerialEquipment}
                                                   className='spanLink'
                                                   title='Кликни что бы изменить Серийный номер'>
                                                 {equipments.serial}
                                             </span>
-                                        </td>
-                                        <td>
-                                            <a onClick={this.linkManufacturer}
-                                               href={this.state.linkManufacturer}
-                                               title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
-                                                {equipments.manufacturer}
-                                            </a>
-                                        </td>
-                                        <RemoveEquipment/>
-                                        <td className='id'>
-                                            {equipments.id}
-                                        </td>
-                                    </tr>
-                                )
+                                            </td>
+                                            <td>
+                                                <a onClick={this.linkManufacturer}
+                                                   href={this.state.linkManufacturer}
+                                                   title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
+                                                    {equipments.manufacturer}
+                                                </a>
+                                            </td>
+                                            <RemoveEquipment/>
+                                            <td>
+                                                <SendEquipmentUnderRepair/>
+                                            </td>
+                                            <td className='id'>
+                                                {equipments.id}
+                                            </td>
+                                        </tr>
+                                    )
+                                };
+                                if(equipments.repair === true) {
+                                    return (
+                                        <tr className = 'inRepair'>
+                                            <td>
+                                            <span onClick={this.changeShopEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить номер Цеха'>
+                                                {equipments.shop}
+                                            </span>
+                                            </td>
+                                            <td title={'Порядковый номер'}>
+                                                {index + 1}
+                                            </td>
+                                            <td>
+                                                <a onClick={this.visibleSettings}
+                                                   target='_blank'
+                                                   rel="noopener noreferrer"
+                                                   title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
+                                                    {equipments.model}
+                                                </a>
+                                            </td>
+                                            <td>
+                                            <span onClick={this.changeInventoryEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Инвентарный номер'>
+                                                {equipments.inventory}
+                                            </span>
+                                            </td>
+                                            <td>
+                                            <span onClick={this.changeSerialEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Серийный номер'>
+                                                {equipments.serial}
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <a onClick={this.linkManufacturer}
+                                                   href={this.state.linkManufacturer}
+                                                   title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
+                                                    {equipments.manufacturer}
+                                                </a>
+                                            </td>
+                                                <RemoveEquipment/>
+                                            <td>
+                                                <button className='disabledButtonText sendRepair'>На данный момент апарат находиться в ремонте!</button>
+                                            </td>
+                                            <td className='id'>
+                                                {equipments.id}
+                                            </td>
+                                        </tr>
+                                    )
+                                }
                             })
                         }
                         </tbody>
@@ -302,17 +398,25 @@ export default class Equipment extends React.Component {
                     <div>
                         <h4>
                             <div id='endTable'>
-                                Конец таблицы!
+                                Конец таблицы со сварочным оборудованием!
                                 <h5>
-                                    Общее колличество сварочного оборудования = {this.state.equipment.length} шт.
+                                    Общее колличество сварочного оборудования = <span className='numberOfEquipments'>{this.state.equipment.length}</span> шт.
                                 </h5>
                             </div>
                         </h4>
+                        <div>
+                            <EquipmentUnderRepair />
+                        </div>
                     </div>
                     <AddNewEquipment/>
                 </div>
                 <EquipmentsSettings choise={this.state.nameEquipment}/>
                 <ShopEquipments />
+                <div>
+                    <a href='#beginTable'>
+                        В верх страницы! &#8593;
+                    </a>
+                </div>
             </div>
         )
     }

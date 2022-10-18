@@ -37,7 +37,11 @@ export default class RemoveEquipment extends React.Component {
     render() {
         return(
             <td className="removeTd">
-                <button onClick={this.removeEquipment} className="remove">Удалить оборудование из списка</button>
+                <button
+                    onClick={this.removeEquipment} className="remove"
+                    title='Нажмите для удаления оборудования из списка'>
+                    Удалить оборудование из списка
+                </button>
             </td>
         )
     }

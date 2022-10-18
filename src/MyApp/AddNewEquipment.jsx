@@ -49,6 +49,7 @@ export default class AddNewEquipment extends React.Component {
     handleAddId = event => {
         let id = event.nativeEvent.path[3].children[0].children[1].children.length + 1;
         newEquipment.id = Number(id);
+        newEquipment.number = Number(id);
         //===== Дата добавления аппарата
         let date = new Date();
         let options = {

@@ -1,8 +1,32 @@
-table {
+body {
+    /*margin: 0px -860px 0px 0px;*/
+    display: flex;
+    /*flex-direction: row;*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: -20px 0px 0px 0px;
+}
+.h1_MyApp_WelderEquipmentALTEP {
+    padding: 10px 0 0 0;
+    color: red;
+    text-decoration: underline;
+}
+.altep {
 
 }
+table {
+    /*margin: 0 10px;*/
+    margin: 0 auto;
+    width: 100%;
+}
+#endTable {
+    color: lime;
+}
+#endShopTable {
+    color: lime;
+}
 th {
-    padding: 20px;
+    padding: 10px;
     border: 1px solid;
 }
 td {
@@ -10,6 +34,11 @@ td {
 }
 tr {
 
+}
+.numberOfEquipments {
+    color: red;
+    font-weight: 900;
+    text-decoration: underline;
 }
 .remove {
     display: grid;
@@ -136,4 +165,44 @@ img {
 .form_h4_AddNewEquipment {
     margin: -10px 0px 20px 0px;
     color: chartreuse;
+}
+.DateLocal {
+    /*margin: 50px 0px;*/
+    color: lime;
+    padding: 30px 0px 45px;
+}
+.sendRepair {
+    padding: 10px;
+    margin: 20px 10px;
+    border: 1px solid;
+    border-color: springgreen;
+    border-radius: 10px;
+    background-color: gold;
+    /*width: 120px;*/
+}
+.sendRepair:hover {
+    background-color: blue;
+    cursor: pointer;
+    color: bisque;
+}
+.inRepair {
+    background-color: red;
+}
+.sendEquipmentUnderRepair {
+    display: flex;
+    flex-direction: column;
+}
+.disabledButtonText {
+    color: aliceblue;
+    font-weight: bolder;
+    background-color: blue;
+    cursor: pointer;
+}
+.EquipmentUnderRepair {
+    margin: 0 10px;
+}
+.h3_EquipmentUnderRepair {
+    text-decoration: underline;
+    color: darkorange;
+    font-family: cursive;
 }

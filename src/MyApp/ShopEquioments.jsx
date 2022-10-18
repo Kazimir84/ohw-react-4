@@ -1,7 +1,6 @@
 import React from "react";
 import axios, {Axios} from "axios";
 import RemoveEquipment from "./RemoveEquipment";
-import Equipment from "./Equipment";
 import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 
 const URL = 'http://localhost:3001/equipments';
@@ -26,7 +25,6 @@ export default class ShopEquipments extends React.Component {
         this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
         this.linkManufacturer = this.linkManufacturer.bind(this);
         this.visibleSettingsEquipment = this.visibleSettingsEquipment.bind(this);
-        this.data = this.data.bind(this);
     };
 
     componentDidMount() {
@@ -214,18 +212,7 @@ export default class ShopEquipments extends React.Component {
         divVisibleShopButton.classList.toggle("hiddenSetting");
         // ====
     };
-    // ========
-    data = event => {
-        let thisDate = new Date();
-        let options = {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long',
-            timezone: 'UTC',
-        };
-        return  thisDate.toLocaleString("ua", options);
-    };
+
 
     render() {
         return (
@@ -249,7 +236,6 @@ export default class ShopEquipments extends React.Component {
                     <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='10'>
                         Оборудование Цеха №10
                     </button>
-                    <div>Сегодня -> {this.data()}</div>
                 </div>
                 <div className='visibleShopList hiddenShopList'>
                     <p className='styleShopPage'>Оборудование цеха № {this.state.selectedShop}</p>
@@ -353,7 +339,7 @@ export default class ShopEquipments extends React.Component {
                                 Конец таблицы!
                                 <h5>
                                     Общее колличество сварочного оборудования
-                                    = {this.state.shopEquipment.length} шт.
+                                    = <span className='numberOfEquipments'>{this.state.shopEquipment.length}</span> шт.
                                 </h5>
                             </div>
                         </h4>
