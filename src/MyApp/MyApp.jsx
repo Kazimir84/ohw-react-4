@@ -3,7 +3,6 @@ import {Axios} from "axios";
 import Equipment from "./Equipment";
 import MyCSS from "./MyCSS.css"
 import DateLocal from "./DateLocal";
-import EquipmentUnderRepair from "./EquipmentUnderRepair";
 
 export default class MyApp extends React.Component {
     constructor(props) {
@@ -21,11 +20,10 @@ export default class MyApp extends React.Component {
         return (
             <div>
                 <h1 className='h1_MyApp_WelderEquipmentALTEP' id='beginTable'>
-                    Сварочное оборудование компании <span className='altep' onClick={this.changeColor}>ALTEP</span>
+                    Сварочное оборудование компании <span className='altep' onClick={this.changeColor} title='Нажми на ALTEP!'>ALTEP</span>
                 </h1>
                 <div>
                     <Equipment />
-                    {/*<EquipmentUnderRepair />*/}
                     <DateLocal />
                 </div>
             </div>

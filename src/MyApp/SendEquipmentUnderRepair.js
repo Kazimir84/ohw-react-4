@@ -91,7 +91,6 @@ export default class SendEquipmentUnderRepair extends React.Component {
                     repairEquipmentSelected.repair = true;
                     //============
                     this.setState({repairEquipment: repairEquipmentSelected});
-                    // console.log('this state', this.state.repairEquipment);
 
                     axios.post(URL_REPAIR, repairEquipmentSelected)
                         .then(response => {

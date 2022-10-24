@@ -59,7 +59,7 @@ export default class ShopEquipments extends React.Component {
     changeInventoryEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменение Инвентарного Номера', oldValue);
             if (newValue !== null) {
@@ -84,7 +84,7 @@ export default class ShopEquipments extends React.Component {
     changeShopEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменить номер цеха', oldValue);
             if (newValue !== null) {
@@ -109,7 +109,7 @@ export default class ShopEquipments extends React.Component {
     changeSerialEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменить Серийный номер аппарата', oldValue);
             if (newValue !== null) {
@@ -313,6 +313,9 @@ export default class ShopEquipments extends React.Component {
                                             </a>
                                         </td>
                                         <RemoveEquipment/>
+                                        <td>
+
+                                        </td>
                                         <td className='id'>
                                             {equipments.id}
                                         </td>
@@ -321,17 +324,6 @@ export default class ShopEquipments extends React.Component {
                             })
                         }
                         </tbody>
-                        <tfoot>
-                        {/*<h4>*/}
-                        {/*    <div id='endShopTable'>*/}
-                        {/*        Конец таблицы!*/}
-                        {/*        <h5>*/}
-                        {/*            Общее колличество сварочного оборудования*/}
-                        {/*            = {this.state.shopEquipment.length} шт.*/}
-                        {/*        </h5>*/}
-                        {/*    </div>*/}
-                        {/*</h4>*/}
-                        </tfoot>
                     </table>
                     <div>
                         <h4>

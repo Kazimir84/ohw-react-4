@@ -835,8 +835,8 @@
       "id": 84,
       "number": 84,
       "inventory": "A269",
-      "model": "",
-      "manufacturer": "ESABOrigio MIG C340 Pro",
+      "model": "ESABOrigio MIG C340 Pro",
+      "manufacturer": "ESAB",
       "serial": "627-551-4099",
       "repair": false
     },
@@ -1394,7 +1394,7 @@
       "shop": 10,
       "id": 140,
       "number": 140,
-      "inventory": "Данные небыли введены",
+      "inventory": "----",
       "model": "MEGMEET Artsen CM500",
       "manufacturer": "MEGMEET",
       "serial": "ZF050016214400031",
@@ -1408,7 +1408,6 @@
       "model": "Машина плазменной резки ЧПУ Radian-1500",
       "manufacturer": "Radian",
       "serial": "----",
-      "date": "вторник, 11 октября 2022 г. от Рождества Христова, 19:11:43",
       "repair": false
     }
   ],

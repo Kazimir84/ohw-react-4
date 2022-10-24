@@ -206,3 +206,24 @@ img {
     color: darkorange;
     font-family: cursive;
 }
+.notFoundEquipment {
+    border-style: solid;
+    color: red;
+    font-size: x-large;
+    margin: 20px 5px 0px 5px;
+    border-radius: 10px;
+    background-color: gold;
+    padding: 5px 0px;
+}
+.foundEquipment {
+    color: darkblue;
+    font-size: larger;
+    border-style: solid;
+    margin: 5px 10px;
+    border-radius: 10px;
+    background-color: gold;
+    padding: 5px 0px;
+}
+.blockHeight {
+    height: 220px;
+}

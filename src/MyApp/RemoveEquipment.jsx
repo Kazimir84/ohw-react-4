@@ -18,7 +18,9 @@ export default class RemoveEquipment extends React.Component {
     removeEquipment (event) {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].cells[7].innerText);
+            console.log('IDDDD', event)
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
+            console.log('IDDDD', event)
             this.setState({id: id});
             event.nativeEvent.path[2].remove();
             axios.delete(`${URL}/${id}`)

@@ -6,6 +6,7 @@ import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
 import ShopEquipments from "./ShopEquioments";
 import SendEquipmentUnderRepair from "./SendEquipmentUnderRepair";
 import EquipmentUnderRepair from "./EquipmentUnderRepair";
+import FoundEquipment from "./FoundEquipment";
 
 
 const PASSWORD = 'admin';
@@ -41,25 +42,6 @@ export default class Equipment extends React.Component {
                     this.setState({error: error})
                     console.log('Error', error.code)
                 })
-        // =====
-        // fetch(URL)
-        //     .then(res => res.json())
-        //     .then(
-        //         (result) => {
-        //             console.log('dddd', result)
-        //             this.setState({
-        //                 equipment: result
-        //             });
-        //         },
-        //         // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-        //         // чтобы не перехватывать исключения из ошибок в самих компонентах.
-        //         (error) => {
-        //             this.setState({
-        //                 error
-        //             });
-        //         }
-        //     )
-        // ====
     };
 
     visibleSettings = event => {
@@ -87,7 +69,7 @@ export default class Equipment extends React.Component {
     changeInventoryEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменение Инвентарного Номера', oldValue);
             if (newValue !== null) {
@@ -112,7 +94,7 @@ export default class Equipment extends React.Component {
     changeShopEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменить номер цеха', oldValue);
                 if (newValue !== null) {
@@ -137,7 +119,7 @@ export default class Equipment extends React.Component {
     changeSerialEquipment = event => {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
         if (passwordEnter === PASSWORD) {
-            let id = Number(event.nativeEvent.path[2].children[1].textContent);
+            let id = Number(event.nativeEvent.path[2].cells[8].innerText);
             let oldValue = event.nativeEvent.path[0].textContent;
             let newValue = prompt('Изменить Серийный номер аппарата', oldValue);
             if (newValue !== null) {
@@ -212,20 +194,6 @@ export default class Equipment extends React.Component {
         };
     };
 
-//======================
-//     sendEquipmentUnderRepair (event) {
-//
-//         console.log('ffff', Number(event.nativeEvent.path[3].cells[8].innerText))
-//
-//             let selectedTd = event.nativeEvent.path[3];
-//             let selectedButton = event.nativeEvent.path[0];
-//             selectedTd.classList.toggle('inRepair');
-//             selectedButton.setAttribute('disabled', 'disabled');
-//             selectedButton.innerHTML = 'На данный момент аппарат находиться в ремонте!';
-//             selectedButton.classList.toggle('disabledButtonText');
-//     };
-//==================
-
     render() {
         if (this.state.error !== null) {
             return (
@@ -267,7 +235,7 @@ export default class Equipment extends React.Component {
                                 <a href='#endTable'>В конец страницы &#8595;</a>
                             </th>
                             <th>
-                                Ремонт аппарата
+                                Ремонт апарата
                             </th>
                             <th className='id'>
                                 Id
@@ -384,16 +352,6 @@ export default class Equipment extends React.Component {
                             })
                         }
                         </tbody>
-                        <tfoot>
-                        {/*<h4>*/}
-                        {/*    <div id='endTable'>*/}
-                        {/*        Конец таблицы!*/}
-                        {/*        <h5>*/}
-                        {/*            Общее колличество сварочного оборудования = {this.state.equipment.length} шт.*/}
-                        {/*        </h5>*/}
-                        {/*    </div>*/}
-                        {/*</h4>*/}
-                        </tfoot>
                     </table>
                     <div>
                         <h4>
@@ -404,6 +362,9 @@ export default class Equipment extends React.Component {
                                 </h5>
                             </div>
                         </h4>
+                        <div>
+                            <FoundEquipment />
+                        </div>
                         <div>
                             <EquipmentUnderRepair />
                         </div>

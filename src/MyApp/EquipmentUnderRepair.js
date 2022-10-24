@@ -1,6 +1,5 @@
 import React from "react";
 import axios, {Axios} from "axios";
-import RemoveEquipment from "./RemoveEquipment";
 import RemoveEquipmentFromRepair from "./RemoveEquipmentFromRepair";
 
 const URL_REPAIR = "http://localhost:3001/repairEquipments"

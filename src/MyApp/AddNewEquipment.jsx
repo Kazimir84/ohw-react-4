@@ -14,6 +14,7 @@ const newEquipment = {
     manufacturer: 'Данные небыли введены',
     serial: 'Данные небыли введены',
     date: 'Данные небыли введены',
+    repair: false,
 };
 // let newEquipments = [];
 
@@ -50,7 +51,7 @@ export default class AddNewEquipment extends React.Component {
         let id = event.nativeEvent.path[3].children[0].children[1].children.length + 1;
         newEquipment.id = Number(id);
         newEquipment.number = Number(id);
-        //===== Дата добавления аппарата
+        //===== Дата добавления апарата
         let date = new Date();
         let options = {
             era: 'long',

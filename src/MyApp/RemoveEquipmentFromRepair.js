@@ -51,58 +51,11 @@ export default class RemoveEquipmentFromRepair extends React.Component {
                                     console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
                                 })
                         })
-                    //===========
                 })
 
         } else {
             alert('У Вас нет прав для этого действия!');
         };
-        //====================
-
-//         axios.get(URL)
-//             .then(response => {
-//                 console.log('response', response.data)
-//                 this.setState({equipments: response.data})
-//                 let repairEquipmentSelected = response.data.find(function (value, index) {
-//                     return value.id === id;
-//                 });
-//                 repairEquipmentSelected.repair = true;
-//
-//                 const URLPUT = `http://localhost:3001/equipments/${repairEquipmentSelected.id.toString()}`;
-//                 axios.put(URLPUT, repairEquipmentSelected)
-//                     .then(response => {
-//                         console.log('RESPONSE', response.data);
-//                         this.pageReload();
-//                     })
-//                     .catch(e => {
-//                         this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
-//                         console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
-//                     })
-//
-//                 console.log('dddd', repairEquipmentSelected);
-//                 //============Добавляем информацию о ремонте
-//                 repairEquipmentSelected.dateRepair = `${dateRepair}`;
-//                 repairEquipmentSelected.serviceCenterContacts = `${serviceCenterContacts}`;
-//                 repairEquipmentSelected.breakdownDescription = `${breakdownDescription}`;
-//                 repairEquipmentSelected.repairCost = `${repairCost}`;
-//                 repairEquipmentSelected.repairTime = `${repairTime}`;
-//                 repairEquipmentSelected.repair = true;
-//                 //============
-//                 this.setState({repairEquipment: repairEquipmentSelected});
-//                 // console.log('this state', this.state.repairEquipment);
-//
-//                 axios.post(URL_REPAIR, repairEquipmentSelected)
-//                     .then(response => {
-//                         console.log('resSSS', response.data);
-//                     })
-//                 // document.location.reload();
-//             })
-//
-//     } else {
-//     alert('У Вас нет прав для этого действия!');
-// };
-
-        //=================
     }
 
     render() {
