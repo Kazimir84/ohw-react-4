@@ -92,7 +92,17 @@ export default class FoundEquipment extends React.Component {
                                             с Заводским номером - <b>{equipment.serial}</b> ,
                                             и Инвентарным номером - <b>{equipment.inventory}</b> ,
                                             находиться в Цеху № - <b>{equipment.shop}</b> ,
-                                            в таблице под номером <b>{equipment.id+1}</b>
+                                            в таблице под номером
+                                            <b>
+                                                <a
+                                                    className='foundEquipment'
+                                                    href={'#'+String(equipment.id + 1)}
+                                                    title='Нажмите что бы найти оборудование в таблице'
+                                                >
+                                                    {equipment.id + 1}
+
+                                                </a>
+                                            </b>
 
                                         </div>
                                     )

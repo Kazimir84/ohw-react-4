@@ -266,7 +266,7 @@ export default class Equipment extends React.Component {
                             this.state.equipment.map((equipments, index) => {
                                 if(equipments.repair === false) {
                                     return (
-                                        <tr>
+                                        <tr id={equipments.id + 1}>
                                             <td>
                                             <span onClick={this.changeShopEquipment}
                                                   className='spanLink'
