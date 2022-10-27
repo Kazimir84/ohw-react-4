@@ -1088,7 +1088,7 @@
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-831-7758",
-      "repair": false
+      "repair": true
     },
     {
       "shop": 9,
@@ -1411,5 +1411,22 @@
       "repair": false
     }
   ],
-  "repairEquipments": []
+  "repairEquipments": [
+    {
+      "shop": 9,
+      "id": 109,
+      "number": 109,
+      "inventory": "А279",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-831-7758",
+      "repair": true,
+      "dateRepair": "18.08.2022г",
+      "serviceCenterContacts": "ESAB",
+      "breakdownDescription": "Сгорел силовой трансформатор",
+      "repairCost": "50000",
+      "repairTime": "60"
+    }
+  ],
+  "historyOfRepairEquipments": []
 }

@@ -271,56 +271,112 @@ export default class ShopEquipments extends React.Component {
                         <tbody>
                         {
                             this.state.shopEquipment.map((equipments, index) => {
-                                return (
-                                    <tr>
-                                        <td>
+                                if(equipments.repair === false) {
+                                    return (
+                                        <tr>
+                                            <td>
                                             <span onClick={this.changeShopEquipment}
                                                   className='spanLink'
                                                   title='Кликни что бы изменить номер Цеха'>
                                                 {equipments.shop}
                                             </span>
-                                        </td>
-                                        <td>
-                                            {index + 1}
-                                        </td>
-                                        <td>
-                                            <a onClick={this.visibleSettingsEquipment}
-                                               target='_blank'
-                                               rel="noopener noreferrer"
-                                               title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
-                                                {equipments.model}
-                                            </a>
-                                        </td>
-                                        <td>
+                                            </td>
+                                            <td>
+                                                {index + 1}
+                                            </td>
+                                            <td>
+                                                <a onClick={this.visibleSettingsEquipment}
+                                                   target='_blank'
+                                                   rel="noopener noreferrer"
+                                                   title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
+                                                    {equipments.model}
+                                                </a>
+                                            </td>
+                                            <td>
                                             <span onClick={this.changeInventoryEquipment}
                                                   className='spanLink'
                                                   title='Кликни что бы изменить Инвентарный номер'>
                                                 {equipments.inventory}
                                             </span>
-                                        </td>
-                                        <td>
+                                            </td>
+                                            <td>
                                             <span onClick={this.changeSerialEquipment}
                                                   className='spanLink'
                                                   title='Кликни что бы изменить Серийный номер'>
                                                 {equipments.serial}
                                             </span>
-                                        </td>
-                                        <td>
-                                            <a onClick={this.linkManufacturer}
-                                               href={this.state.linkManufacturer}
-                                               title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
-                                                {equipments.manufacturer}
-                                            </a>
-                                        </td>
-                                        <RemoveEquipment/>
-                                        <td>
+                                            </td>
+                                            <td>
+                                                <a onClick={this.linkManufacturer}
+                                                   href={this.state.linkManufacturer}
+                                                   title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
+                                                    {equipments.manufacturer}
+                                                </a>
+                                            </td>
+                                            <RemoveEquipment/>
+                                            <td className='hiddenTD'>
 
-                                        </td>
-                                        <td className='id'>
-                                            {equipments.id}
-                                        </td>
-                                    </tr>
-                                )
+                                            </td>
+                                            <td className='id'>
+                                                {equipments.id}
+                                            </td>
+                                        </tr>
+                                    )
+                                };
+                                if(equipments.repair === true) {
+                                    return (
+                                        <tr className = 'inRepair'>
+                                            <td>
+                                            <span onClick={this.changeShopEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить номер Цеха'>
+                                                {equipments.shop}
+                                            </span>
+                                            </td>
+                                            <td title={'Порядковый номер'}>
+                                                {index + 1}
+                                            </td>
+                                            <td>
+                                                <a onClick={this.visibleSettingsEquipment}
+                                                   className='shopEquipmentTdTextStyle'
+                                                   target='_blank'
+                                                   rel="noopener noreferrer"
+                                                   title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
+                                                    {equipments.model}
+                                                </a>
+                                            </td>
+                                            <td>
+                                            <span onClick={this.changeInventoryEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Инвентарный номер'>
+                                                {equipments.inventory}
+                                            </span>
+                                            </td>
+                                            <td>
+                                            <span onClick={this.changeSerialEquipment}
+                                                  className='spanLink'
+                                                  title='Кликни что бы изменить Серийный номер'>
+                                                {equipments.serial}
+                                            </span>
+                                            </td>
+                                            <td>
+                                                <a onClick={this.linkManufacturer}
+                                                   className='shopEquipmentTdTextStyle'
+                                                   href={this.state.linkManufacturer}
+                                                   title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
+                                                    {equipments.manufacturer}
+                                                </a>
+                                            </td>
+                                            <RemoveEquipment/>
+                                            <td>
+                                                <button className='disabledButtonText sendRepair'>На данный момент апарат находиться в ремонте!</button>
+                                            </td>
+                                            <td className='id'>
+                                                {equipments.id}
+                                            </td>
+                                        </tr>
+                                    )
+                                }
                             })
                         }
                         </tbody>

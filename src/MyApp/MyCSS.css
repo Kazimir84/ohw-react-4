@@ -227,3 +227,13 @@ img {
 .blockHeight {
     height: 220px;
 }
+
+.hiddenTD {
+    display: none;
+}
+.shopEquipmentTdTextStyle {
+    color: white;
+}
+.shopEquipmentTdTextStyle:hover {
+    color: yellow;
+}

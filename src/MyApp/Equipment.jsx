@@ -29,7 +29,26 @@ export default class Equipment extends React.Component {
         this.changeShopEquipment = this.changeShopEquipment.bind(this);
         this.pageReload = this.pageReload.bind(this);
         this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
+        //-------------------------------------
+        // this.fetchEqw = this.fetchEqw.bind(this)
+        //-------------------------------------
     };
+    //----------------------------------------
+    // componentDidMount() {
+    //     this.fetchEqw();
+    // }
+    //
+    // fetchEqw = () => {
+    //     // this.setState({...this.state, isFetching: true})
+    //     axios.get(URL)
+    //         .then(response => {
+    //             response.data.sort((a, b) => a.shop - b.shop);
+    //             this.setState({equipment: response.data})
+    //         })
+    //         .catch(e => console.log(e));
+    // }
+    //----------------------------------------------
+
 
     componentDidMount() {
             axios.get(URL)
@@ -312,6 +331,7 @@ export default class Equipment extends React.Component {
                                             </td>
                                             <td>
                                                 <a onClick={this.visibleSettings}
+                                                   className='shopEquipmentTdTextStyle'
                                                    target='_blank'
                                                    rel="noopener noreferrer"
                                                    title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
@@ -334,6 +354,7 @@ export default class Equipment extends React.Component {
                                             </td>
                                             <td>
                                                 <a onClick={this.linkManufacturer}
+                                                   className='shopEquipmentTdTextStyle'
                                                    href={this.state.linkManufacturer}
                                                    title={'Ссылка на сайт компании' + ' ' + '"' + equipments.manufacturer + '"'}>
                                                     {equipments.manufacturer}

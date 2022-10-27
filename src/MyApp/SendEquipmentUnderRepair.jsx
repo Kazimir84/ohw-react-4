@@ -71,6 +71,15 @@ export default class SendEquipmentUnderRepair extends React.Component {
                     repairEquipmentSelected.repair = true;
 
                     const URLPUT = `http://localhost:3001/equipments/${repairEquipmentSelected.id.toString()}`;
+                    axios.post(URLPUT, repairEquipmentSelected)
+                        .then(response => {
+                            console.log('RESPONSE', response.data);
+                            this.pageReload();
+                        })
+                        .catch(e => {
+                            this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                            console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                        });
                     axios.put(URLPUT, repairEquipmentSelected)
                         .then(response => {
                             console.log('RESPONSE', response.data);
