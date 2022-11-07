@@ -835,8 +835,8 @@
       "id": 84,
       "number": 84,
       "inventory": "A269",
-      "model": "",
-      "manufacturer": "ESABOrigio MIG C340 Pro",
+      "model": "ESABOrigio MIG C340 Pro",
+      "manufacturer": "ESAB",
       "serial": "627-551-4099",
       "repair": false
     },
@@ -1138,7 +1138,7 @@
       "model": "Origio MIG C340 Pro",
       "manufacturer": "ESAB",
       "serial": "627-732-6458",
-      "repair": false
+      "repair": true
     },
     {
       "shop": 9,
@@ -1394,7 +1394,7 @@
       "shop": 10,
       "id": 140,
       "number": 140,
-      "inventory": "Данные небыли введены",
+      "inventory": "----",
       "model": "MEGMEET Artsen CM500",
       "manufacturer": "MEGMEET",
       "serial": "ZF050016214400031",
@@ -1408,11 +1408,69 @@
       "model": "Машина плазменной резки ЧПУ Radian-1500",
       "manufacturer": "Radian",
       "serial": "----",
-      "date": "вторник, 11 октября 2022 г. от Рождества Христова, 19:11:43",
+      "repair": false
+    },
+    {
+      "shop": 9,
+      "id": 142,
+      "number": 142,
+      "inventory": "----",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "027864",
+      "date": "пятница, 4 ноября 2022 г. от Рождества Христова, 15:58:29",
+      "repair": false
+    },
+    {
+      "shop": 9,
+      "id": 143,
+      "number": 143,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "ZF030037212600135",
+      "date": "пятница, 4 ноября 2022 г. от Рождества Христова, 16:01:22",
+      "repair": false
+    },
+    {
+      "shop": 9,
+      "id": 144,
+      "number": 144,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "ZF030037212600153",
+      "date": "пятница, 4 ноября 2022 г. от Рождества Христова, 16:03:55",
+      "repair": false
+    },
+    {
+      "shop": 9,
+      "id": 145,
+      "number": 145,
+      "inventory": "----",
+      "model": "MEGMEET Ehave CM500",
+      "manufacturer": "MEGMEET",
+      "serial": "ZF030037212600159",
+      "date": "пятница, 4 ноября 2022 г. от Рождества Христова, 16:05:16",
       "repair": false
     }
   ],
   "repairEquipments": [
-
-  ]
+    {
+      "shop": 9,
+      "id": 114,
+      "number": 114,
+      "inventory": "А-292",
+      "model": "Origio MIG C340 Pro",
+      "manufacturer": "ESAB",
+      "serial": "627-732-6458",
+      "repair": true,
+      "dateRepair": "18.08.2022г",
+      "serviceCenterContacts": "ESAB Александр +380678070942",
+      "breakdownDescription": "Предположение о сгоревшем силовом трансформаторе.",
+      "repairCost": "50000",
+      "repairTime": "60"
+    }
+  ],
+  "historyOfRepairEquipments": []
 }

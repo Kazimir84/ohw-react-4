@@ -1,6 +1,7 @@
 import React from "react";
 import axios, {Axios} from "axios";
 import RemoveEquipmentFromRepair from "./RemoveEquipmentFromRepair";
+import MyCSS from "./MyCSS.css"
 
 const URL_REPAIR = "http://localhost:3001/repairEquipments";
 const PASSWORD = 'admin';

@@ -11,7 +11,10 @@ import FoundEquipment from "./FoundEquipment";
 
 const PASSWORD = 'admin';
 const URL = 'http://localhost:3001/equipments';
-// const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json'
+// const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json';
+// const URL = 'https://github.com/Kazimir84/ohw-react-4/blob/main/src/db'
+
+// const equipment = [];
 
 export default class Equipment extends React.Component {
     constructor(props) {
@@ -43,7 +46,8 @@ export default class Equipment extends React.Component {
     //     axios.get(URL)
     //         .then(response => {
     //             response.data.sort((a, b) => a.shop - b.shop);
-    //             this.setState({equipment: response.data})
+    //             this.setState({equipment:response.data});
+    //             console.log('equipment', equipment);
     //         })
     //         .catch(e => console.log(e));
     // }
@@ -318,7 +322,7 @@ export default class Equipment extends React.Component {
                                 };
                                 if(equipments.repair === true) {
                                     return (
-                                        <tr className = 'inRepair'>
+                                        <tr className = 'inRepair' id={equipments.id + 1}>
                                             <td>
                                             <span onClick={this.changeShopEquipment}
                                                   className='spanLink'
