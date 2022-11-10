@@ -1158,7 +1158,7 @@
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
       "serial": "----",
-      "repair": false
+      "repair": true
     },
     {
       "shop": 9,
@@ -1465,11 +1465,26 @@
       "manufacturer": "ESAB",
       "serial": "627-732-6458",
       "repair": true,
-      "dateRepair": "18.08.2022г",
+      "dateRepair": "18.08.2022г.",
       "serviceCenterContacts": "ESAB Александр +380678070942",
       "breakdownDescription": "Предположение о сгоревшем силовом трансформаторе.",
       "repairCost": "50000",
       "repairTime": "60"
+    },
+    {
+      "shop": 9,
+      "id": 116,
+      "number": 116,
+      "inventory": "А440",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----",
+      "repair": true,
+      "dateRepair": "11.11.2022г.",
+      "serviceCenterContacts": "Савичев Владимир Якович +38066849011",
+      "breakdownDescription": "Не зажигается сварочная дуга и не регулируется сварочный ток.",
+      "repairCost": "900",
+      "repairTime": "7"
     }
   ],
   "historyOfRepairEquipments": []

@@ -12,7 +12,8 @@ import FoundEquipment from "./FoundEquipment";
 const PASSWORD = 'admin';
 const URL = 'http://localhost:3001/equipments';
 // const URL = 'https://welders-73e50-default-rtdb.firebaseio.com/equipments.json';
-// const URL = 'https://github.com/Kazimir84/ohw-react-4/blob/main/src/db'
+// const URL = 'https://github.com/Kazimir84/ohw-react-4/blob/main/src/db';
+
 
 // const equipment = [];
 

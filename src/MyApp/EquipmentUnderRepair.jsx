@@ -16,6 +16,11 @@ export default class EquipmentUnderRepair extends React.Component {
         }
         this.props = props;
         this.linkManufacturer = this.linkManufacturer.bind(this);
+        this.changeDiscription = this.changeDiscription.bind(this);
+        this.changeServiceCenterContacts = this.changeServiceCenterContacts.bind(this);
+        this.changeRepairCost = this.changeRepairCost.bind(this);
+        this.changeRepairTime = this.changeRepairTime.bind(this);
+        this.changeDateRepair = this.changeDateRepair.bind(this)
     }
 
     componentDidMount() {
@@ -54,6 +59,131 @@ export default class EquipmentUnderRepair extends React.Component {
             alert('У Вас нет прав для этого действия!');
         }
     };
+
+    changeDiscription = event => {
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].cells[12].innerText);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменение описанной неисправности', oldValue);
+            if (newValue !== null) {
+                let target = this.state.repairEquipment.find((index => index.id === id));
+                target.breakdownDescription = newValue;
+                const URLPUT = `http://localhost:3001/repairEquipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Неисправность изменена c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    }
+
+    changeServiceCenterContacts = event => {
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].cells[12].innerText);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменение данные сервисного центра', oldValue);
+            if (newValue !== null) {
+                let target = this.state.repairEquipment.find((index => index.id === id));
+                target.serviceCenterContacts = newValue;
+                const URLPUT = `http://localhost:3001/repairEquipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Контактные данные сервисного центра изменены c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    }
+
+    changeRepairCost = event => {
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].cells[12].innerText);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменение данные стоимости ремонта', oldValue);
+            if (newValue !== null) {
+                let target = this.state.repairEquipment.find((index => index.id === id));
+                target.repairCost = newValue;
+                const URLPUT = `http://localhost:3001/repairEquipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Стоимость ремонта изменена c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    }
+
+    changeRepairTime = event => {
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].cells[12].innerText);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменение данные стоимости ремонта', oldValue);
+            if (newValue !== null) {
+                let target = this.state.repairEquipment.find((index => index.id === id));
+                target.repairTime = newValue;
+                const URLPUT = `http://localhost:3001/repairEquipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Срок ремонта изменен c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    }
+
+    changeDateRepair = event => {
+        let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
+        if (passwordEnter === PASSWORD) {
+            let id = Number(event.nativeEvent.path[2].cells[12].innerText);
+            let oldValue = event.nativeEvent.path[0].textContent;
+            let newValue = prompt('Изменение даты начала ремонта', oldValue);
+            if (newValue !== null) {
+                let target = this.state.repairEquipment.find((index => index.id === id));
+                target.dateRepair = newValue;
+                const URLPUT = `http://localhost:3001/repairEquipments/${target.id.toString()}`;
+                axios.put(URLPUT, target)
+                    .then(response => {
+                        alert(`Дата начала ремонта изменена c ${oldValue} на ${newValue} успешно!`);
+                        this.pageReload();
+                    })
+                    .catch(e => {
+                        this.setState({error: 'Ошибка ' + e.name + ":" + e.message + "\n" + e.stack});
+                        console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                    })
+            }
+        } else {
+            alert('У Вас нет прав для этого действия!');
+        }
+    }
 
     linkManufacturer = event => {
         let linkManufacturer = event.nativeEvent.path[0].firstChild.textContent;
@@ -201,20 +331,37 @@ export default class EquipmentUnderRepair extends React.Component {
                                                 {equipments.manufacturer}
                                             </a>
                                         </td>
-                                        <td title='Дата когда аппарат был отправлен в ремонт'>
-                                            {equipments.dateRepair}
+                                        <td>
+                                            <a onClick={this.changeDateRepair}
+                                               title='Дата когда аппарат был отправлен в ремонт. Нажмите что бы изменить данные.'>
+                                                {equipments.dateRepair}
+                                            </a>
                                         </td>
-                                        <td title='Описание неисправности выявленное во время работы сварочного оборудования'>
-                                            {equipments.breakdownDescription}
+                                        <td>
+                                            <a  onClick={this.changeDiscription}
+                                                title='Описание неисправности выявленное во время работы сварочного оборудования. Нажмите что бы изменить данные.'>
+                                                {equipments.breakdownDescription}
+                                            </a>
+
                                         </td>
-                                        <td title='Контактные данные сервисного центра или лица осуществляющего ремонт сварочного аппарата'>
-                                            {equipments.serviceCenterContacts}
+                                        <td>
+                                            <a onClick={this.changeServiceCenterContacts}
+                                               title='Контактные данные сервисного центра или лица осуществляющего ремонт сварочного аппарата. Нажмите что бы изменить данные'>
+                                                {equipments.serviceCenterContacts}
+                                            </a>
+
                                         </td>
-                                        <td title='Ориентировочная стоимость ремонта сварочного аппарата'>
-                                            {equipments.repairCost}
+                                        <td>
+                                            <a onClick={this.changeRepairCost}
+                                               title='Ориентировочная стоимость ремонта сварочного аппарата. Нажмите что бы изменить данные.'>
+                                                {equipments.repairCost}
+                                            </a>
                                         </td>
-                                        <td title='Ориентировочное колличество дней для ремонта сварочного аппарата'>
-                                            {equipments.repairTime}
+                                        <td>
+                                            <a onClick={this.changeRepairTime}
+                                               title='Ориентировочное колличество дней для ремонта сварочного аппарата. Нажмите что бы изменить данные.'>
+                                                {equipments.repairTime}
+                                            </a>
                                         </td>
                                         <td>
                                             <RemoveEquipmentFromRepair />

@@ -175,7 +175,7 @@ export default class ShopEquipments extends React.Component {
                 this.setState({linkManufacturer: URLTesla});
                 break;
             case 'PANASONIC':
-                const URLPanasonic = ' https://www.directindustry.com.ru/prod/panasonic-robot-welding-system-solutions/product-29315-116058.html';
+                const URLPanasonic = 'https://www.directindustry.com.ru/prod/panasonic-robot-welding-system-solutions/product-29315-116058.html';
                 this.setState({linkManufacturer: URLPanasonic});
                 break;
 
@@ -221,19 +221,19 @@ export default class ShopEquipments extends React.Component {
                     <button type="submit" className='shop' onClick={this.visibleSettingsShop} id='1'>
                         Оборудование Цеха №1
                     </button>
-                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='2'>
+                    <button type="submit" className='shop'  onClick={this.visibleSettingsShop}  id='2'>
                         Оборудование Цеха №2
                     </button>
-                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='3'>
+                    <button type="submit" className='shop' onClick={this.visibleSettingsShop}  id='3'>
                         Оборудование Цеха №3
                     </button>
-                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='5'>
+                    <button type="submit" className='shop' onClick={this.visibleSettingsShop}  id='5'>
                         Оборудование Цеха №5
                     </button>
-                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='9'>
+                    <button type="submit" className='shop' onClick={this.visibleSettingsShop}  id='9'>
                         Оборудование Цеха №9
                     </button>
-                    <button type="submit" className='shop'onClick={this.visibleSettingsShop}  id='10'>
+                    <button type="submit" className='shop' onClick={this.visibleSettingsShop}  id='10'>
                         Оборудование Цеха №10
                     </button>
                 </div>
