@@ -3,6 +3,7 @@ import axios, {Axios} from "axios";
 
 const URL_REMOVE_FROM_REPAIR = "http://localhost:3001/repairEquipments";
 const URL = "http://localhost:3001/equipments";
+const URL_HISTORY_OF_REPAIR = "http://localhost:3001/historyOfRepairEquipments";
 const PASSWORD = 'admin';
 
 export default class RemoveEquipmentFromRepair extends React.Component {
@@ -10,11 +11,17 @@ export default class RemoveEquipmentFromRepair extends React.Component {
         super(props);
         this.state = {
             id: null,
+            historyId: null,
             repairEquipment: [],
             equipments: []
         }
         this.removeEquipmentFromRepair = this.removeEquipmentFromRepair.bind(this);
+        this.pageReload = this.pageReload.bind(this);
     }
+
+    pageReload() {
+        document.location.reload();
+    };
 
     removeEquipmentFromRepair (event) {
         let passwordEnter = prompt('Введите пароль для подтверждения', 'password');
@@ -23,6 +30,25 @@ export default class RemoveEquipmentFromRepair extends React.Component {
             this.setState({id: id});
             event.nativeEvent.path[3].remove();
 
+            // ======
+            axios.get(URL_HISTORY_OF_REPAIR)
+                .then(response => {
+                    let newId = response.data.length+1;
+                    this.setState({historyId: newId})
+                })
+            axios.get(URL_REMOVE_FROM_REPAIR)
+                .then(response => {
+                    let historyOfRepair = response.data.find(function (value, index) {
+                        return value.id === id;
+                    });
+                    historyOfRepair.id = this.state.historyId;
+                        axios.post(URL_HISTORY_OF_REPAIR, historyOfRepair)
+                            .then(response => {
+                                console.log('History', response.data)
+                                // this.pageReload();
+                            })
+                })
+            // =======
             axios.delete(`${URL_REMOVE_FROM_REPAIR}/${id}`)
                 .then(res => {
                     axios.get(URL)

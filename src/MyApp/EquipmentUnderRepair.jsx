@@ -2,6 +2,7 @@ import React from "react";
 import axios, {Axios} from "axios";
 import RemoveEquipmentFromRepair from "./RemoveEquipmentFromRepair";
 import MyCSS from "./MyCSS.css"
+import {Link} from "react-router-dom";
 
 const URL_REPAIR = "http://localhost:3001/repairEquipments";
 const PASSWORD = 'admin';
@@ -385,6 +386,9 @@ export default class EquipmentUnderRepair extends React.Component {
                             </h5>
                         </div>
                     </h4>
+                </div>
+                <div>
+                    <Link to="/history">Посмотреть истории ремонтов сварочного оборудования!</Link>
                 </div>
             </div>
         )

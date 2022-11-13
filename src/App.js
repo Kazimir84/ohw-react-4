@@ -1,6 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import MyApp from "./MyApp/MyApp";
+import HistoryOfRepairEquipments from "./MyApp/HistoryOfRepairEquipments";
+
+// ==============
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+// ============
+function History() {
+    return (
+        <div>
+            <h1>История ремонта сварочного оборудования компании ALTEP</h1>
+            <HistoryOfRepairEquipments />
+        </div>
+    );
+}
+function Home() {
+    return (
+        <div>
+            <MyApp />
+        </div>
+    );
+}
+// ==============
 
 function App() {
   return (
@@ -18,7 +39,19 @@ function App() {
         {/*>*/}
         {/*  Learn React*/}
         {/*</a>*/}
-        <MyApp />
+
+        {/*<MyApp />*/}
+
+          <BrowserRouter>
+              <Switch>
+                  <Route path="/history">
+                      <History />
+                  </Route>
+                  <Route exact path="/">
+                      <Home />
+                  </Route>
+              </Switch>
+          </BrowserRouter>
       </header>
     </div>
   );
