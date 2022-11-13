@@ -237,3 +237,9 @@ img {
 .shopEquipmentTdTextStyle:hover {
     color: yellow;
 }
+/*============Start====================HistoryOfEquipmentUnderRepair================================*/
+.historyOfEquipmentUnderRepair {
+    background-color: #282c34;
+    min-height: 87vh;
+}
+/*============End======================HistoryOfEquipmentUnderRepair================================*/

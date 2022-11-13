@@ -238,10 +238,10 @@ export default class Equipment extends React.Component {
                         <thead>
                         <tr>
                             <th>
-                                Номер Цеха
+                                № п/п
                             </th>
                             <th>
-                                № п/п
+                                Номер Цеха
                             </th>
                             <th>
                                 Модель апарата
@@ -272,15 +272,15 @@ export default class Equipment extends React.Component {
                                 if(equipments.repair === false) {
                                     return (
                                         <tr id={equipments.id + 1}>
-                                            <td>
-                                            <span onClick={this.changeShopEquipment}
-                                                  className='spanLink'
-                                                  title='Кликни что бы изменить номер Цеха'>
-                                                {equipments.shop}
-                                            </span>
-                                            </td>
                                             <td title={'Порядковый номер'}>
                                                 {index + 1}
+                                            </td>
+                                            <td>
+                                                <span onClick={this.changeShopEquipment}
+                                                      className='spanLink'
+                                                      title='Кликни что бы изменить номер Цеха'>
+                                                    {equipments.shop}
+                                                </span>
                                             </td>
                                             <td>
                                                 <a onClick={this.visibleSettings}
@@ -291,18 +291,18 @@ export default class Equipment extends React.Component {
                                                 </a>
                                             </td>
                                             <td>
-                                            <span onClick={this.changeInventoryEquipment}
-                                                  className='spanLink'
-                                                  title='Кликни что бы изменить Инвентарный номер'>
-                                                {equipments.inventory}
-                                            </span>
+                                                <span onClick={this.changeInventoryEquipment}
+                                                      className='spanLink'
+                                                      title='Кликни что бы изменить Инвентарный номер'>
+                                                    {equipments.inventory}
+                                                </span>
                                             </td>
                                             <td>
-                                            <span onClick={this.changeSerialEquipment}
-                                                  className='spanLink'
-                                                  title='Кликни что бы изменить Серийный номер'>
-                                                {equipments.serial}
-                                            </span>
+                                                <span onClick={this.changeSerialEquipment}
+                                                      className='spanLink'
+                                                      title='Кликни что бы изменить Серийный номер'>
+                                                    {equipments.serial}
+                                                </span>
                                             </td>
                                             <td>
                                                 <a onClick={this.linkManufacturer}
@@ -311,7 +311,7 @@ export default class Equipment extends React.Component {
                                                     {equipments.manufacturer}
                                                 </a>
                                             </td>
-                                            <RemoveEquipment/>
+                                                <RemoveEquipment/>
                                             <td>
                                                 <SendEquipmentUnderRepair/>
                                             </td>
@@ -324,15 +324,15 @@ export default class Equipment extends React.Component {
                                 if(equipments.repair === true) {
                                     return (
                                         <tr className = 'inRepair' id={equipments.id + 1}>
-                                            <td>
-                                            <span onClick={this.changeShopEquipment}
-                                                  className='spanLink'
-                                                  title='Кликни что бы изменить номер Цеха'>
-                                                {equipments.shop}
-                                            </span>
-                                            </td>
                                             <td title={'Порядковый номер'}>
                                                 {index + 1}
+                                            </td>
+                                            <td>
+                                                <span onClick={this.changeShopEquipment}
+                                                      className='spanLink'
+                                                      title='Кликни что бы изменить номер Цеха'>
+                                                    {equipments.shop}
+                                                </span>
                                             </td>
                                             <td>
                                                 <a onClick={this.visibleSettings}
@@ -344,18 +344,18 @@ export default class Equipment extends React.Component {
                                                 </a>
                                             </td>
                                             <td>
-                                            <span onClick={this.changeInventoryEquipment}
-                                                  className='spanLink'
-                                                  title='Кликни что бы изменить Инвентарный номер'>
-                                                {equipments.inventory}
-                                            </span>
+                                                <span onClick={this.changeInventoryEquipment}
+                                                      className='spanLink'
+                                                      title='Кликни что бы изменить Инвентарный номер'>
+                                                    {equipments.inventory}
+                                                </span>
                                             </td>
                                             <td>
-                                            <span onClick={this.changeSerialEquipment}
-                                                  className='spanLink'
-                                                  title='Кликни что бы изменить Серийный номер'>
-                                                {equipments.serial}
-                                            </span>
+                                                <span onClick={this.changeSerialEquipment}
+                                                      className='spanLink'
+                                                      title='Кликни что бы изменить Серийный номер'>
+                                                    {equipments.serial}
+                                                </span>
                                             </td>
                                             <td>
                                                 <a onClick={this.linkManufacturer}

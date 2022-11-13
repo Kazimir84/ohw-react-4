@@ -250,10 +250,10 @@ export default class EquipmentUnderRepair extends React.Component {
                         <thead>
                         <tr>
                             <th>
-                                Номер Цеха
+                                № п/п
                             </th>
                             <th>
-                                № п/п
+                                Номер Цеха
                             </th>
                             <th>
                                 Модель апарата
@@ -295,15 +295,15 @@ export default class EquipmentUnderRepair extends React.Component {
                             this.state.repairEquipment.map((equipments, index) => {
                                 return (
                                     <tr>
+                                        <td title={'Порядковый номер'}>
+                                            {index + 1}
+                                        </td>
                                         <td>
                                             <span
                                                   className='spanLink'
                                                   title='Hомер Цеха'>
                                                 {equipments.shop}
                                             </span>
-                                        </td>
-                                        <td title={'Порядковый номер'}>
-                                            {index + 1}
                                         </td>
                                         <td>
                                             <span
@@ -388,7 +388,11 @@ export default class EquipmentUnderRepair extends React.Component {
                     </h4>
                 </div>
                 <div>
-                    <Link to="/history">Посмотреть истории ремонтов сварочного оборудования!</Link>
+                    <Link
+                        to="/history"
+                        title="Нажмите для просмотра всей истории ремонтов сварочного оборудования.">
+                        Посмотреть истории ремонтов сварочного оборудования!
+                    </Link>
                 </div>
             </div>
         )

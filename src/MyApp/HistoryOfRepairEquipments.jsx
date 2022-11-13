@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import DateLocal from "./DateLocal";
+import MyCSS from "./MyCSS.css"
 
 const URL_HISTORY_REPAIR = "http://localhost:3001/historyOfRepairEquipments";
 
@@ -26,7 +28,7 @@ export default class HistoryOfRepairEquipments extends React.Component {
 
     render() {
         return(
-        <div className='HistoryOfEquipmentUnderRepair'>
+        <div className='historyOfEquipmentUnderRepair'>
             <h3 className = 'h3_HistoryOfEquipmentUnderRepair'>
                 История ремонта сварочного оборудования компании ALTEP
             </h3>
@@ -35,10 +37,10 @@ export default class HistoryOfRepairEquipments extends React.Component {
                     <thead>
                     <tr>
                         <th>
-                            Номер Цеха
+                            № п/п
                         </th>
                         <th>
-                            № п/п
+                            Номер Цеха
                         </th>
                         <th>
                             Модель апарата
@@ -80,15 +82,15 @@ export default class HistoryOfRepairEquipments extends React.Component {
                         this.state.history.map((equipments, index) => {
                             return (
                                 <tr>
+                                    <td title={'Порядковый номер'}>
+                                        {index + 1}
+                                    </td>
                                     <td>
                                         <span
                                             className='spanLink'
                                             title='Hомер Цеха'>
                                             {equipments.shop}
                                         </span>
-                                    </td>
-                                    <td title={'Порядковый номер'}>
-                                        {index + 1}
                                     </td>
                                     <td>
                                         <span
@@ -170,9 +172,14 @@ export default class HistoryOfRepairEquipments extends React.Component {
                 </h4>
             </div>
             <div>
-                <Link to="/">
+                <Link
+                    to="/"
+                    title="Нажмите для возврата на главную страницу!">
                     На главную страницу.
                 </Link>
+            </div>
+            <div>
+                <DateLocal />
             </div>
         </div>
         )
