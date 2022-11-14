@@ -243,3 +243,15 @@ img {
     min-height: 87vh;
 }
 /*============End======================HistoryOfEquipmentUnderRepair================================*/
+/*============Start====================navLink================================*/
+.navLink {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 50px 0px 50px;
+}
+.active {
+    color: red;
+}
+/*============End======================navLink================================*/

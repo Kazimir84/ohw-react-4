@@ -4,11 +4,17 @@ import MyApp from "./MyApp/MyApp";
 import HistoryOfRepairEquipments from "./MyApp/HistoryOfRepairEquipments";
 
 // ==============
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import {BrowserRouter, Switch, Route, Link, NavLink} from "react-router-dom";
+// import React from "@types/react";
 // ============
 function History() {
     return (
         <div>
+            <nav className='navLink'>
+                <NavLink exact to="/" activeClassName="active">Домашняя страница</NavLink>
+                <NavLink to="/history" activeClassName="active">История ремонта сварочного оборудования</NavLink>
+                <a href="https://altep.ua/">Сайт компании ALTEP</a>
+            </nav>
             <h1>История ремонта сварочного оборудования компании ALTEP</h1>
             <HistoryOfRepairEquipments />
         </div>
