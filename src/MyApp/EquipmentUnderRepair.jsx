@@ -2,7 +2,7 @@ import React from "react";
 import axios, {Axios} from "axios";
 import RemoveEquipmentFromRepair from "./RemoveEquipmentFromRepair";
 import MyCSS from "./MyCSS.css"
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const URL_REPAIR = "http://localhost:3001/repairEquipments";
 const PASSWORD = 'admin';
@@ -240,8 +240,28 @@ export default class EquipmentUnderRepair extends React.Component {
     };
 
     render() {
+        const activeStyle = {color: 'red'};
         return (
             <div className='EquipmentUnderRepair'>
+                <nav className='navLink'>
+                    <NavLink exact to="/" activeClassName="active">Домашняя страница</NavLink>
+                    <NavLink to="/repair" activeClassName="active">Сварочное оборудование которое в ремонте</NavLink>
+                    <NavLink to="/history" activeClassName="active">История ремонта сварочного оборудования</NavLink>
+                    <a href="https://altep.ua/">Сайт компании ALTEP</a>
+                </nav>
+                <div className="dropdown">
+                    <button className="dropbtn">Цех</button>
+                    <div className="dropdown-content">
+                        <NavLink exact to="/" activeStyle={activeStyle}>Домашняя страница</NavLink>
+                        <NavLink to="/shop1" activeStyle={activeStyle}>Цех №1</NavLink>
+                        <NavLink to="/shop2" activeStyle={activeStyle}>Цех №2</NavLink>
+                        <NavLink to="/shop3" activeStyle={activeStyle}>Цех №3</NavLink>
+                        <NavLink to="/shop5" activeStyle={activeStyle}>Цех №5</NavLink>
+                        <NavLink to="/shop9" activeStyle={activeStyle}>Цех №9</NavLink>
+                        <NavLink to="/shop10" activeStyle={activeStyle}>Цех №10</NavLink>
+                        <NavLink to="/deletedEquipments" activeStyle={activeStyle}>Списанное Оборудование</NavLink>
+                    </div>
+                </div>
                 <h3 className = 'h3_EquipmentUnderRepair'>
                     Оборудование которое на данный момент находится в ремонте!
                 </h3>

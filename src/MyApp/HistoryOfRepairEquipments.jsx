@@ -58,6 +58,9 @@ export default class HistoryOfRepairEquipments extends React.Component {
                             Дата отправки в ремонт
                         </th>
                         <th>
+                            Дата возврата с ремонта
+                        </th>
+                        <th>
                             Неисправность
                         </th>
                         <th>
@@ -120,8 +123,14 @@ export default class HistoryOfRepairEquipments extends React.Component {
                                     </td>
                                     <td>
                                         <span
-                                           title='Дата ремонта сварочного аппарата.'>
+                                           title='Дата отправки в ремонт сварочного аппарата.'>
                                             {equipments.dateRepair}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span
+                                            title='Дата возврата с ремонта сварочного аппарата.'>
+                                            {equipments.date}
                                         </span>
                                     </td>
                                     <td>

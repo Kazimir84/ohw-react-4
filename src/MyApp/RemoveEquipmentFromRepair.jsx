@@ -30,7 +30,7 @@ export default class RemoveEquipmentFromRepair extends React.Component {
             this.setState({id: id});
             event.nativeEvent.path[3].remove();
 
-            // ======
+//=======================Begin=======Добавление лтремонтированного оборудования в список История ремонта Оборудования===
             axios.get(URL_HISTORY_OF_REPAIR)
                 .then(response => {
                     let newId = response.data.length+1;
@@ -48,7 +48,8 @@ export default class RemoveEquipmentFromRepair extends React.Component {
                                 // this.pageReload();
                             })
                 })
-            // =======
+//=======================End============================================================================================
+
             axios.delete(`${URL_REMOVE_FROM_REPAIR}/${id}`)
                 .then(res => {
                     axios.get(URL)

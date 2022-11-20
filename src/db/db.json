@@ -1453,9 +1453,35 @@
       "serial": "ZF030037212600159",
       "date": "пятница, 4 ноября 2022 г. от Рождества Христова, 16:05:16",
       "repair": false
+    },
+    {
+      "shop": 10,
+      "id": 146,
+      "number": 146,
+      "inventory": "TEST",
+      "model": "TEST",
+      "manufacturer": "TEST",
+      "serial": "TEST",
+      "date": "воскресенье, 20 ноября 2022 г. от Рождества Христова, 14:50:00",
+      "repair": false
     }
   ],
   "repairEquipments": [
+    {
+      "shop": 9,
+      "id": 117,
+      "number": 117,
+      "inventory": "Ф45",
+      "model": "БУРАН ПДГ-315",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "3150623 ремонт (на спис.)",
+      "repair": true,
+      "dateRepair": "1.05.2022г.",
+      "serviceCenterContacts": "Качура (Энергетик) +380930710748",
+      "breakdownDescription": "Не выходит на сварочные режимы. Вероятно замыкание вторичной цепи трансформатора.",
+      "repairCost": "0",
+      "repairTime": "0"
+    },
     {
       "shop": 9,
       "id": 114,
@@ -1481,13 +1507,12 @@
       "serial": "----",
       "repair": true,
       "dateRepair": "11.11.2022г.",
-      "serviceCenterContacts": "Савичев Владимир Якович +38066849011",
+      "serviceCenterContacts": "Полтавская область, с.Веприк., ул.Полевая дом 40. Савичев Владимир Якович +38066849011  ТТН 20400304481476",
       "breakdownDescription": "Не зажигается сварочная дуга и не регулируется сварочный ток.",
-      "repairCost": "900",
+      "repairCost": "450",
       "repairTime": "7"
     }
   ],
-  "historyOfRepairEquipments": [
-
-  ]
+  "historyOfRepairEquipments": [],
+  "deletedEquipments": []
 }
