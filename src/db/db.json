@@ -1168,7 +1168,7 @@
       "model": "БУРАН ПДГ-315",
       "manufacturer": "ЭНЕРГИЯ",
       "serial": "ремонт (на спис.)",
-      "repair": false
+      "repair": true
     },
     {
       "shop": 9,
@@ -1452,17 +1452,6 @@
       "manufacturer": "MEGMEET",
       "serial": "ZF030037212600159",
       "date": "пятница, 4 ноября 2022 г. от Рождества Христова, 16:05:16",
-      "repair": false
-    },
-    {
-      "shop": 10,
-      "id": 146,
-      "number": 146,
-      "inventory": "TEST",
-      "model": "TEST",
-      "manufacturer": "TEST",
-      "serial": "TEST",
-      "date": "воскресенье, 20 ноября 2022 г. от Рождества Христова, 14:50:00",
       "repair": false
     }
   ],

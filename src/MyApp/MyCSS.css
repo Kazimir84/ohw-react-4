@@ -240,7 +240,7 @@ img {
 /*============Start====================HistoryOfEquipmentUnderRepair================================*/
 .historyOfEquipmentUnderRepair {
     background-color: #282c34;
-    min-height: 87vh;
+    min-height: 85vh;
 }
 /*============End======================HistoryOfEquipmentUnderRepair================================*/
 /*============Start====================navLink================================*/
@@ -304,3 +304,6 @@ img {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 /*============End======================Dropdown Button================================*/
+.delletedEquipments {
+    min-height: 99vh;
+}

@@ -17,6 +17,7 @@ export default class Shop_9 extends React.Component {
             selectedShop: 9,
             error: null,
             nameEquipment: null,
+            equipmentNameLink: null
         }
         this.props = props;
         this.changeInventoryEquipment = this.changeInventoryEquipment.bind(this);
@@ -24,6 +25,7 @@ export default class Shop_9 extends React.Component {
         this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
         this.linkManufacturer = this.linkManufacturer.bind(this);
         this.pageReload = this.pageReload.bind(this);
+        this.linkSettingsEquipments = this.linkSettingsEquipments.bind(this);
     };
 
     componentDidMount() {
@@ -174,6 +176,20 @@ export default class Shop_9 extends React.Component {
         };
     };
 
+    linkSettingsEquipments = event => {
+        if (event.nativeEvent.path[0].innerText === 'ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus' || event.nativeEvent.path[0].innerText === 'ESAB Aristo Mig Pulse ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus') {
+            let equipmentName = 'ESAB_Aristo_Mig_Pulse_500';
+            this.setState({equipmentNameLink:equipmentName});
+        } else if (event.nativeEvent.path[0].innerText === 'Робот для сварки Panasonic Robot Controller TA 1400 WG ||| E YA-1WAR61E00 (OM1303030E)') {
+            let equipmentName = 'Panasonic_Robot_Controller_TA_1400';
+            this.setState({equipmentNameLink:equipmentName});
+        }
+        else {
+            let equipmentName = event.nativeEvent.path[0].innerText.split(' ').join('_');
+            this.setState({equipmentNameLink:equipmentName});
+        }
+    }
+
     render() {
         const activeStyle = {color: 'red'};
         return (
@@ -245,8 +261,8 @@ export default class Shop_9 extends React.Component {
                                                 </span>
                                             </td>
                                             <td>
-                                                <a onClick={this.visibleSettingsEquipment}
-                                                   target='_blank'
+                                                <a onClick={this.linkSettingsEquipments}
+                                                   href={this.state.equipmentNameLink}
                                                    rel="noopener noreferrer"
                                                    title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
                                                     {equipments.model}
@@ -297,9 +313,9 @@ export default class Shop_9 extends React.Component {
                                                 </span>
                                             </td>
                                             <td>
-                                                <a onClick={this.visibleSettingsEquipment}
+                                                <a onClick={this.linkSettingsEquipments}
+                                                   href={this.state.equipmentNameLink}
                                                    className='shopEquipmentTdTextStyle'
-                                                   target='_blank'
                                                    rel="noopener noreferrer"
                                                    title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
                                                     {equipments.model}

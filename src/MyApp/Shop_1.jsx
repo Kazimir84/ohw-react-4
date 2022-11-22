@@ -2,8 +2,9 @@ import React from "react";
 import axios, {Axios} from "axios";
 import RemoveEquipment from "./RemoveEquipment";
 import EquipmentsSettings from "../WelderEquipment/EquipmentsSettings";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import DateLocal from "./DateLocal";
+import {Redirect} from "react-router-dom";
 
 const URL = 'http://localhost:3001/equipments';
 const PASSWORD = 'admin';
@@ -17,6 +18,7 @@ export default class Shop_1 extends React.Component {
             selectedShop: 1,
             error: null,
             nameEquipment: null,
+            targetNameEquipment: null
         }
         this.props = props;
         this.changeInventoryEquipment = this.changeInventoryEquipment.bind(this);
@@ -24,6 +26,7 @@ export default class Shop_1 extends React.Component {
         this.changeSerialEquipment = this.changeSerialEquipment.bind(this);
         this.linkManufacturer = this.linkManufacturer.bind(this);
         this.pageReload = this.pageReload.bind(this);
+        this.linkSettingsEquipments = this.linkSettingsEquipments.bind(this);
     };
 
     componentDidMount() {
@@ -174,6 +177,20 @@ export default class Shop_1 extends React.Component {
         };
     };
 
+    linkSettingsEquipments = event => {
+        if (event.nativeEvent.path[0].innerText === 'ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus' || event.nativeEvent.path[0].innerText === 'ESAB Aristo Mig Pulse ESAB Aristo Mig Pulse COOL ESAB (БВО) AristoR Feed 3004 Пульт AristoR U82 Plus') {
+            let equipmentName = 'ESAB_Aristo_Mig_Pulse_500';
+            this.setState({equipmentNameLink:equipmentName});
+        } else if (event.nativeEvent.path[0].innerText === 'Робот для сварки Panasonic Robot Controller TA 1400 WG ||| E YA-1WAR61E00 (OM1303030E)') {
+            let equipmentName = 'Panasonic_Robot_Controller_TA_1400';
+            this.setState({equipmentNameLink:equipmentName});
+        }
+        else {
+            let equipmentName = event.nativeEvent.path[0].innerText.split(' ').join('_');
+            this.setState({equipmentNameLink:equipmentName});
+        }
+    };
+
     render() {
         const activeStyle = {color: 'red'};
         return (
@@ -234,7 +251,7 @@ export default class Shop_1 extends React.Component {
                                 if(equipments.repair === false) {
                                     return (
                                         <tr>
-                                            <td>
+                                            <td onClick={this.btnBackData}>
                                                 {index + 1}
                                             </td>
                                             <td>
@@ -245,9 +262,9 @@ export default class Shop_1 extends React.Component {
                                                 </span>
                                             </td>
                                             <td>
-                                                <a onClick={this.visibleSettingsEquipment}
-                                                   target='_blank'
+                                                <a onClick={this.linkSettingsEquipments}
                                                    rel="noopener noreferrer"
+                                                   href={this.state.equipmentNameLink}
                                                    title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
                                                     {equipments.model}
                                                 </a>
@@ -297,10 +314,10 @@ export default class Shop_1 extends React.Component {
                                                 </span>
                                             </td>
                                             <td>
-                                                <a onClick={this.visibleSettingsEquipment}
-                                                   className='shopEquipmentTdTextStyle'
-                                                   target='_blank'
+                                                <a onClick={this.linkSettingsEquipments}
                                                    rel="noopener noreferrer"
+                                                   href={`/${this.state.targetNameEquipment}`}
+                                                   className='shopEquipmentTdTextStyle'
                                                    title={'Кликните для продробного описания Модели Сварочного аппарата' + ' ' + '"' + equipments.model + '"'}>
                                                     {equipments.model}
                                                 </a>
