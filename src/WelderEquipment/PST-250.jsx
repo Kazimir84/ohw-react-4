@@ -68,7 +68,7 @@ export default class PST250 extends React.Component {
                     </ol>
                 </p>
                 <button className="BackToList">
-                    <a href="/shop1">Вернуться к списку оборудования</a>
+                    <a href="/">Вернуться к списку оборудования</a>
                 </button>
             </div>
         )

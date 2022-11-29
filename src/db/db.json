@@ -1098,7 +1098,7 @@
       "model": "Энергия ПДГУ-500",
       "manufacturer": "ЭНЕРГИЯ",
       "serial": "5000282",
-      "repair": false
+      "repair": true
     },
     {
       "shop": 9,
@@ -1108,7 +1108,7 @@
       "model": "Энергия ПДГУ-500",
       "manufacturer": "ЭНЕРГИЯ",
       "serial": "5000294",
-      "repair": false
+      "repair": true
     },
     {
       "shop": 9,
@@ -1158,7 +1158,7 @@
       "model": "SSVA-160-2",
       "manufacturer": "SSVA",
       "serial": "----",
-      "repair": true
+      "repair": false
     },
     {
       "shop": 9,
@@ -1488,7 +1488,39 @@
     },
     {
       "shop": 9,
-      "id": 116,
+      "id": 110,
+      "number": 110,
+      "inventory": "Н0187",
+      "model": "Энергия ПДГУ-500",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "5000282",
+      "repair": true,
+      "dateRepair": "25.11.2022г.",
+      "serviceCenterContacts": "+380676180726 - ⁨Энергия Сварка⁩ - Николай",
+      "breakdownDescription": "После запуска генератора, выбило автомат на аппарате, вероятно неисправность диодного моста и силовых теристоров.",
+      "repairCost": "0",
+      "repairTime": "30"
+    },
+    {
+      "shop": 9,
+      "id": 111,
+      "number": 111,
+      "inventory": "Н0188",
+      "model": "Энергия ПДГУ-500",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "5000294",
+      "repair": true,
+      "dateRepair": "25.11.2022г.",
+      "serviceCenterContacts": "+380676180726 - ⁨Энергия Сварка⁩- Николай",
+      "breakdownDescription": "После запуска генератора, выбило автомат на аппарате, вероятно неисправность диодного моста и силовых теристоров.",
+      "repairCost": "0",
+      "repairTime": "30"
+    }
+  ],
+  "historyOfRepairEquipments": [
+    {
+      "shop": 9,
+      "id": 1,
       "number": 116,
       "inventory": "А440",
       "model": "SSVA-160-2",
@@ -1499,9 +1531,25 @@
       "serviceCenterContacts": "Полтавская область, с.Веприк., ул.Полевая дом 40. Савичев Владимир Якович +38066849011  ТТН 20400304481476",
       "breakdownDescription": "Не зажигается сварочная дуга и не регулируется сварочный ток.",
       "repairCost": "450",
-      "repairTime": "7"
+      "repairTime": "7",
+      "dateFromRepair": "понедельник, 28 ноября 2022 г. от Рождества Христова, 16:16:41"
+    },
+    {
+      "shop": 9,
+      "id": 2,
+      "number": 119,
+      "inventory": "A338",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----",
+      "repair": true,
+      "dateRepair": "23.11.2022г.",
+      "serviceCenterContacts": "Качура (Энергетик) +380930710748",
+      "breakdownDescription": "После запуска генератора, аппарат стал циклически перезагружаться, что приводит к невозможности сваривать изделия.",
+      "repairCost": "0",
+      "repairTime": "5",
+      "dateFromRepair": "понедельник, 28 ноября 2022 г. от Рождества Христова, 16:26:15"
     }
   ],
-  "historyOfRepairEquipments": [],
   "deletedEquipments": []
 }

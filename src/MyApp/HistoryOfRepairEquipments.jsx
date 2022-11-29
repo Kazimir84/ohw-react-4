@@ -130,7 +130,7 @@ export default class HistoryOfRepairEquipments extends React.Component {
                                     <td>
                                         <span
                                             title='Дата возврата с ремонта сварочного аппарата.'>
-                                            {equipments.date}
+                                            {equipments.dateFromRepair}
                                         </span>
                                     </td>
                                     <td>

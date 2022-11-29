@@ -17,7 +17,8 @@ export default class Shop_5 extends React.Component {
             selectedShop: 5,
             error: null,
             nameEquipment: null,
-            equipmentNameLink: null
+            equipmentNameLink: null,
+            shopEquipmentRepair:[]
         }
         this.props = props;
         this.changeInventoryEquipment = this.changeInventoryEquipment.bind(this);
@@ -43,6 +44,13 @@ export default class Shop_5 extends React.Component {
                 console.log('Error', error.code)
             })
     };
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        axios.get(URL)
+            .then(response => {
+                let shopEquipmentRepair = this.state.shopEquipment.filter(equipments => equipments.repair === true);
+                this.setState({shopEquipmentRepair: shopEquipmentRepair});
+            })
+    }
 
     pageReload() {
         document.location.reload();
@@ -363,7 +371,19 @@ export default class Shop_5 extends React.Component {
                                 Конец таблицы!
                                 <h5>
                                     Общее колличество сварочного оборудования
-                                    = <span className='numberOfEquipments'>{this.state.shopEquipment.length}</span> шт.
+                                    = <span className='numberOfEquipments'>
+                                        {
+                                            this.state.shopEquipment.length
+                                        }
+                                    </span> шт.
+                                </h5>
+                                <h5>
+                                    Общее колличество сварочного оборудования в ремонте
+                                    = <span className='numberOfEquipments'>
+                                        {
+                                            this.state.shopEquipmentRepair.length
+                                        }
+                                    </span> шт.
                                 </h5>
                             </div>
                         </h4>

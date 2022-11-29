@@ -41,6 +41,21 @@ export default class RemoveEquipmentFromRepair extends React.Component {
                     let historyOfRepair = response.data.find(function (value, index) {
                         return value.id === id;
                     });
+//======================== Дата добавление апарата в список Истории отремонтированных===================================
+                    let date = new Date();
+                    let options = {
+                        era: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        weekday: 'long',
+                        timezone: 'UTC',
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        second: 'numeric'
+                    };
+                    historyOfRepair.dateFromRepair = date.toLocaleString("ua", options);
+//======================================================================================================================
                     historyOfRepair.id = this.state.historyId;
                         axios.post(URL_HISTORY_OF_REPAIR, historyOfRepair)
                             .then(response => {

@@ -1167,7 +1167,7 @@
       "inventory": "Ф45",
       "model": "БУРАН ПДГ-315",
       "manufacturer": "ЭНЕРГИЯ",
-      "serial": "3150623 ремонт (на спис.)",
+      "serial": "ремонт (на спис.)",
       "repair": true
     },
     {
@@ -1458,6 +1458,21 @@
   "repairEquipments": [
     {
       "shop": 9,
+      "id": 117,
+      "number": 117,
+      "inventory": "Ф45",
+      "model": "БУРАН ПДГ-315",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "3150623 ремонт (на спис.)",
+      "repair": true,
+      "dateRepair": "1.05.2022г.",
+      "serviceCenterContacts": "Качура (Энергетик) +380930710748",
+      "breakdownDescription": "Не выходит на сварочные режимы. Вероятно замыкание вторичной цепи трансформатора.",
+      "repairCost": "0",
+      "repairTime": "0"
+    },
+    {
+      "shop": 9,
       "id": 114,
       "number": 114,
       "inventory": "А-292",
@@ -1473,7 +1488,39 @@
     },
     {
       "shop": 9,
-      "id": 116,
+      "id": 110,
+      "number": 110,
+      "inventory": "Н0187",
+      "model": "Энергия ПДГУ-500",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "5000282",
+      "repair": true,
+      "dateRepair": "25.11.2022г.",
+      "serviceCenterContacts": "+380676180726 - ⁨Энергия Сварка⁩ - Николай",
+      "breakdownDescription": "После запуска генератора, выбило автомат на аппарате, вероятно неисправность диодного моста и силовых теристоров.",
+      "repairCost": "0",
+      "repairTime": "30"
+    },
+    {
+      "shop": 9,
+      "id": 111,
+      "number": 111,
+      "inventory": "Н0188",
+      "model": "Энергия ПДГУ-500",
+      "manufacturer": "ЭНЕРГИЯ",
+      "serial": "5000294",
+      "repair": true,
+      "dateRepair": "25.11.2022г.",
+      "serviceCenterContacts": "+380676180726 - ⁨Энергия Сварка⁩- Николай",
+      "breakdownDescription": "После запуска генератора, выбило автомат на аппарате, вероятно неисправность диодного моста и силовых теристоров.",
+      "repairCost": "0",
+      "repairTime": "30"
+    }
+  ],
+  "historyOfRepairEquipments": [
+    {
+      "shop": 9,
+      "id": 1,
       "number": 116,
       "inventory": "А440",
       "model": "SSVA-160-2",
@@ -1483,24 +1530,26 @@
       "dateRepair": "11.11.2022г.",
       "serviceCenterContacts": "Полтавская область, с.Веприк., ул.Полевая дом 40. Савичев Владимир Якович +38066849011  ТТН 20400304481476",
       "breakdownDescription": "Не зажигается сварочная дуга и не регулируется сварочный ток.",
-      "repairCost": "800",
-      "repairTime": "7"
+      "repairCost": "450",
+      "repairTime": "7",
+      "dateFromRepair": "понедельник, 28 ноября 2022 г. от Рождества Христова, 16:16:41"
     },
     {
       "shop": 9,
-      "id": 117,
-      "number": 117,
-      "inventory": "Ф45",
-      "model": "БУРАН ПДГ-315",
-      "manufacturer": "ЭНЕРГИЯ",
-      "serial": "3150623 ремонт (на спис.)",
+      "id": 2,
+      "number": 119,
+      "inventory": "A338",
+      "model": "SSVA-160-2",
+      "manufacturer": "SSVA",
+      "serial": "----",
       "repair": true,
-      "dateRepair": "1.05.2022г.",
+      "dateRepair": "23.11.2022г.",
       "serviceCenterContacts": "Качура (Энергетик) +380930710748",
-      "breakdownDescription": "Не выходит на сварочные режимы. Вероятно замыкание вторичной цепи трансформатора.",
+      "breakdownDescription": "После запуска генератора, аппарат стал циклически перезагружаться, что приводит к невозможности сваривать изделия.",
       "repairCost": "0",
-      "repairTime": "0"
+      "repairTime": "5",
+      "dateFromRepair": "понедельник, 28 ноября 2022 г. от Рождества Христова, 16:26:15"
     }
   ],
-  "historyOfRepairEquipments": []
+  "deletedEquipments": []
 }
